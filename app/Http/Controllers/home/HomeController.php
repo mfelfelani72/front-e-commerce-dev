@@ -12,7 +12,6 @@ class HomeController extends Controller
 
     public function index()
     {
-
         $response = Http::get('https://dog.ceo/api/breed/hound/list');
         // dd($response->json()["message"]);
         // try {
@@ -41,7 +40,7 @@ class HomeController extends Controller
         //         'message' => 'Internal server error!'
         //     ], 500);
         // }
-        return inertia('Home', [
+        return inertia('home/Home', [
             "message" => $response->json()["message"]
         ]);
     }
