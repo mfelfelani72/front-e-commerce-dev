@@ -18,19 +18,19 @@ createInertiaApp({
         }
         // user
         else {
-            modules = import.meta.glob("../views/js/user/modules/**/*.jsx", { eager: true });
+            const modules = import.meta.glob("../views/js/user/modules/**/*.{js,jsx}", { eager: true });
             module = modules[`../views/js/user/modules/${name}.jsx`];
         }
 
         return module;
     },
     setup({ el, App, props }) {
-       
+
         const ThemeWrapper = ({ children }) => {
             if (props.initialPage.props.theme === false) {
                 return children;
             }
-            
+
             return window.location.pathname.includes('/admin') ? (
                 <AdminTheme>{children}</AdminTheme>
             ) : (
