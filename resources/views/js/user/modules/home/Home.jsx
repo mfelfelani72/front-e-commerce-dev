@@ -3,6 +3,7 @@ import { Head, Link } from "@inertiajs/react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import UserLayout from '../../themes/Theme'; // Import your user layout
+import navigate from "../../../../../../app/Utils/Libs/navigate";
 
 const Home = ({ ...props }) => {
     // hooks
@@ -31,7 +32,7 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div className="py-2 font-bold text-teal-500 flex flex-row w-full justify-center">
+            <div onClick={()=>navigate("home2")} className="py-2 font-bold text-teal-500 flex flex-row w-full justify-center">
                 This is Home and this is props{" "} {t("login")}
                 <div className="flex flex-row gap-6">
                     {props?.message?.map((item, index) => (
