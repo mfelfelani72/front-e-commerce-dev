@@ -1,8 +1,7 @@
 
-import { Head, Link } from "@inertiajs/react";
+import { Head, Link, router } from "@inertiajs/react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import UserLayout from '../../themes/Theme'; // Import your user layout
 
 const Home = ({ ...props }) => {
     // hooks
@@ -31,8 +30,8 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div className="py-2 font-bold text-teal-500 flex flex-row w-full justify-center">
-                This is Home and this is props{" "} {t("login")}
+            <div onClick={() => router.visit('/admin')} className="cursor-pointer py-2 font-bold text-teal-500 flex flex-row w-full justify-center">
+                This is Home and this is props{" "} {t("text")}
                 <div className="flex flex-row gap-6">
                     {props?.message?.map((item, index) => (
                         <div key={index}>{item}</div>
@@ -43,5 +42,4 @@ const Home = ({ ...props }) => {
     );
 };
 
-// Home.layout = UserLayout;
 export default Home;

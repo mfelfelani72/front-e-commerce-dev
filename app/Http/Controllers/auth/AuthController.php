@@ -9,8 +9,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return inertia('auth/containers/Login', [
-            "theme" => false,
+        return inertia('containers/Login', [
             "message" => "mohammad"
         ]);
     }

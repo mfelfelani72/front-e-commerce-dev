@@ -6,9 +6,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('/admin', HomeController::class);
-Route::resource('/', HomeController::class);
+
+Route::controller(HomeController::class)->group(function () {
+
+    Route::get('/home', 'index');
+    Route::get('/home2', 'index2');
+});
+
 
 Route::controller(AuthController::class)->group(function () {
-   
-    Route::get('/login', 'login');
+
+    Route::get('/auth/login', 'login');
 });
