@@ -37,17 +37,17 @@ const Login = () => {
 
   return (
     <>
-      <div className='flex flex-row w-screen h-screen items-center justify-center'>
-        <div className='w-[64rem] h-full relative'>
-          <div className='absolute inset-y-0 left-[0.5rem]'>
-            <img src={image} alt='image' className='w-[32rem] h-full' />
+      <div className='flex flex-row w-screen h-screen items-center justify-center bg-violet-100'>
+        <div className='w-[64rem] h-[42rem] relative'>
+          <div className='absolute inset-y-0 left-[0.5rem] shadow-xl'>
+            <img src={image} alt='image' className='w-[32rem] h-full rounded-bl-2xl rounded-tl-2xl' />
           </div>
-          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center p-14'>
+          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl rounded-br-2xl rounded-tr-2xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center p-14 shadow-xl'>
             <Logo width="36" height="48" />
 
-            <h1 className='mt-6 font-bold text-2xl'>{t("create_account")}</h1>
+            <h1 className='font-bold text-2xl'>{t("create_account")}</h1>
 
-            <GoogleButton classname={"mt-6"} />
+            <GoogleButton classname={"py-2 mt-6"} />
 
             {/* line    Or    line */}
 
