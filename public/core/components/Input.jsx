@@ -77,7 +77,7 @@ export const InputEmail = ({ className, ...props }) => {
         <>
             <label
                 htmlFor={props?.id}
-                className="text-base font-medium text-gray-500 px-3 mb-1"
+                className="text-xs font-medium text-gray-500 px-1 mb-2"
             >
                 {props?.label}
             </label>
@@ -90,7 +90,7 @@ export const InputEmail = ({ className, ...props }) => {
                     type="email"
                     placeholder={props?.placeholder}
                     className={cn(
-                        "autofill-input-dark peer placeholder-Neutral-200 w-full px-[2.7rem] py-3 rounded-lg bg-background-light border border-gray-200 focus:outline-none focus:ring-0 focus:border-secondary-400  justify-between items-center relative",
+                        "autofill-input-dark peer placeholder-gray-900 w-full px-[2.7rem] py-3 rounded-lg bg-background-light border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400  justify-between items-center relative",
                         className
                     )}
                     onBlur={() => {
@@ -138,13 +138,13 @@ export const InputEmail = ({ className, ...props }) => {
                         id="input_email_validate"
                         className="peer-focus:hidden absolute inset-x-0 mt-2 mx-3"
                     >
-                        <div className="text-Error-400 text-xs font-medium">
+                        <div className="text-red-500 text-xs font-medium">
                             {t(props?.error)}
                         </div>
                     </div>
                 )}
                 <div className={`hidden peer-invalid:flex absolute mt-2 mx-3`}>
-                    <div className="text-Error-400 text-xs font-medium">
+                    <div className="text-red-500 text-xs font-medium">
                         {t("error_invalid_email")}</div>
                 </div>
 

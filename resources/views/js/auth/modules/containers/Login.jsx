@@ -41,7 +41,7 @@ const Login = () => {
             </div>
 
             <div className='flex flex-col items-start w-full mt-6'>
-              <InputEmail id="email" label="email" placeholder="mfelfelani72@gmail.com" theme="light" />
+              <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" />
             </div>
 
           </div>
