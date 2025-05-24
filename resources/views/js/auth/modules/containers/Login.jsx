@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 // Components
 
-import { Logo } from "../../../../../../public/core/components/Icon.jsx"
+import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../../public/core/components/Icon.jsx"
 import { GoogleButton, SubmitButton, TextButton } from '../../../../../../public/core/components/Button.jsx';
 import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
 import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
@@ -38,11 +38,11 @@ const Login = () => {
   return (
     <>
       <div className='flex flex-row w-screen h-screen items-center justify-center'>
-        <div className='w-[64rem] h-full relative '>
+        <div className='w-[64rem] h-full relative'>
           <div className='absolute inset-y-0 left-[0.5rem]'>
             <img src={image} alt='image' className='w-[32rem] h-full' />
           </div>
-          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl bg-gray-50 w-[32rem] h-full inline-flex flex-col items-center p-14'>
+          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center p-14'>
             <Logo width="36" height="48" />
 
             <h1 className='mt-6 font-bold text-2xl'>{t("create_account")}</h1>
@@ -106,6 +106,13 @@ const Login = () => {
                 {t("already_have_account")}
               </div>
               <TextButton className="text-xs" text={t("login")} />
+            </div>
+
+            <div className='flex flex-row gap-2 mt-4'>
+              <FaceBookIcon width="32" height="32" color={"#686677"} />
+              <TwitterIcon width="32" height="32" color={"#686677"} />
+              <InstagramIcon width="32" height="32" color={"#686677"} />
+              <LinkdinIcon width="32" height="32" color={"#686677"} />
             </div>
 
           </div>
