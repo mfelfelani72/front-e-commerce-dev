@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <>
-      <div className='flex flex-row w-screen h-screen items-center justify-center bg-violet-100'>
+      <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-100 to-white'>
         <div className='w-[64rem] h-[42rem] relative'>
           <div className='absolute inset-y-0 left-[0.5rem] shadow-xl'>
             <img src={image} alt='image' className='w-[32rem] h-full rounded-bl-2xl rounded-tl-2xl' />
