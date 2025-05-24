@@ -8,6 +8,10 @@ const en = {
     error_min_length_password: "At least 5 characters",
     re_password: "Repeat password",
     error_re_password: "Password are not the same as repeating password",
+
+    // login
+    already_have_account: "Already have an account?",
+    login: "Login",
 };
 
 export default en;

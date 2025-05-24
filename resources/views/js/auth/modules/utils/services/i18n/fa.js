@@ -8,6 +8,10 @@ const fa = {
     error_min_length_password: "حداقل 5 کاراکتر",
     re_password: "تکرار کلمه عبور",
     error_re_password: "کلمه عبور با تکرار کلمه عبور یکسان نیست",
+
+    // login
+    already_have_account: "حساب دارید؟",
+    login: "ورود",
 };
 
 export default fa;

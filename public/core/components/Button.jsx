@@ -38,4 +38,20 @@ export const SubmitButton = ({ children, className, ...props }) => {
         </>
     );
 };
+export const TextButton = ({ text, className, ...props }) => {
+    return (
+        <>
+            <div
+                {...props}
+                className={cn(
+                    "select-none text-violet-500 cursor-pointer",
+                    className
+                )}
+            >
+                {text}
+            </div>
+        </>
+    );
+};
+
 

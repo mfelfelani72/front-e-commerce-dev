@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 // Components
 
 import { Logo } from "../../../../../../public/core/components/Icon.jsx"
-import { GoogleButton, SubmitButton } from '../../../../../../public/core/components/Button.jsx';
+import { GoogleButton, SubmitButton, TextButton } from '../../../../../../public/core/components/Button.jsx';
 import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
 import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
 
@@ -49,12 +49,15 @@ const Login = () => {
 
             <GoogleButton classname={"mt-6"} />
 
+            {/* line    Or    line */}
+
             <div className='flex flex-row mt-6 gap-6 items-center'>
               <div className='w-28 h-0 outline outline-gray-200'></div>
               <div className='font-medium text-sm text-gray-500'>{t("or")}</div>
               <div className='w-28 h-0 outline outline-gray-200'></div>
             </div>
 
+            {/* form */}
             <div className='flex flex-col items-start w-full mt-6'>
               <div className='w-full'>
                 <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" />
@@ -92,9 +95,17 @@ const Login = () => {
                   <div className=''>
                     {t("create_account")}
                   </div>
-
                 </SubmitButton>
               </div>
+            </div>
+
+            {/*  */}
+
+            <div className='flex flex-row gap-1 mt-3'>
+              <div className='text-xs text-gray-900'>
+                {t("already_have_account")}
+              </div>
+              <TextButton className="text-xs" text={t("login")} />
             </div>
 
           </div>
