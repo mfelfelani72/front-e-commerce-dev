@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Logo } from "../../../../../../public/core/components/Icon.jsx"
 import { GoogleButton } from '../../../../../../public/core/components/Button.jsx';
-import { InputEmail } from '../../../../../../public/core/components/Input.jsx';
+import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
 
 // Functions
 
@@ -41,7 +41,21 @@ const Login = () => {
             </div>
 
             <div className='flex flex-col items-start w-full mt-6'>
-              <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" />
+              <div className='w-full'>
+                <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" />
+              </div>
+              <div className='mt-4 w-full'>
+                <InputPassword
+                  id="ch_password"
+                  type="change_password"
+                  label={t("password")}
+                  theme={"light"}
+                />
+              </div>
+              <div className='mt-4 w-full'>
+                <InputRePassword id="ch_confirm_password" label={t("re_password")}
+                  theme={"light"} button_id="register" />
+              </div>
             </div>
 
           </div>
