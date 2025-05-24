@@ -14,7 +14,7 @@ import navigate from '../../../../../../app/Utils/Libs/navigate';
 
 // Images
 
-import image from "../../../../../../public/assets/image/image.png"
+import image from "../../../../../../public/assets/image/image2.jpg"
 
 // Zustand
 
@@ -39,10 +39,15 @@ const Login = () => {
     <>
       <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-100 to-white'>
         <div className='w-[64rem] h-[42rem] relative'>
-          <div className='absolute inset-y-0 left-[0.5rem] shadow-xl'>
+
+          <div className='absolute inset-y-0 left-[0.5rem] shadow-xl z-10'>
             <img src={image} alt='image' className='w-[32rem] h-full rounded-bl-2xl rounded-tl-2xl' />
           </div>
-          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl rounded-br-2xl rounded-tr-2xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center p-14 shadow-xl'>
+
+          <div className='absolute bg-purple-700 opacity-30 inset-y-0 left-[0.5rem] rounded-2xl z-20 w-[32rem] h-full'>
+           
+          </div>
+          <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl rounded-br-2xl rounded-tr-2xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center p-14 shadow-xl z-30'>
             <Logo width="36" height="48" />
 
             <h1 className='font-bold text-2xl'>{t("create_account")}</h1>
