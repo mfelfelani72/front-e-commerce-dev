@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next';
 // Components
 
 import { Logo } from "../../../../../../public/core/components/Icon.jsx"
-import { GoogleButton } from '../../../../../../public/core/components/Button.jsx';
+import { GoogleButton, SubmitButton } from '../../../../../../public/core/components/Button.jsx';
 import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
+import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
 
 // Functions
 
@@ -15,10 +16,24 @@ import navigate from '../../../../../../app/Utils/Libs/navigate';
 
 import image from "../../../../../../public/assets/image/image.png"
 
+// Zustand
+
+import useAppStore from "../../../../../../app/Utils/stores/AppStore.js";
+import fa from '../utils/services/i18n/fa.js';
 
 const Login = () => {
   // hooks
   const { t } = useTranslation();
+
+  // states
+
+  const sendRequest = useAppStore((state) => state.sendRequest);
+  const setSendRequest = useAppStore((state) => state.setSendRequest);
+
+  // functions
+  const handleClick = () => {
+    setSendRequest(true)
+  }
 
   return (
     <>
@@ -55,6 +70,30 @@ const Login = () => {
               <div className='mt-4 w-full'>
                 <InputRePassword id="ch_confirm_password" label={t("re_password")}
                   theme={"light"} button_id="register" />
+              </div>
+
+              <div className='w-full mt-10'>
+                <SubmitButton
+                  id="register"
+                  onClick={() => {
+                    handleClick();
+                  }}
+                  className="hidden relative"
+                >
+                  <div className=''>
+                    {t("create_account")}
+                  </div>
+                  {sendRequest && <LoaderDotSpinner className={"rtl:left-0 ltr:right-0"} />}
+                </SubmitButton>
+                <SubmitButton
+                  id="register_disable"
+                  className="flex bg-gray-400 pointer-events-none cursor-default"
+                >
+                  <div className=''>
+                    {t("create_account")}
+                  </div>
+
+                </SubmitButton>
               </div>
             </div>
 

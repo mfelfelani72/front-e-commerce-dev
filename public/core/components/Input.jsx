@@ -258,7 +258,7 @@ export const InputPassword = ({ className, ...props }) => {
                         placeholder="xxxx xxxx xxxx xxxx"
                         className="autofill-input-dark peer placeholder-gray-900 w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
                     />
-                    <div className=" absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center">
+                    <div className=" absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center cursor-pointer">
                         <div
                             className="flex"
                             onClick={() => handleShow(props?.id)}
