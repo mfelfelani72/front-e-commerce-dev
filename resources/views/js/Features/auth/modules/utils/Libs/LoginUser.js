@@ -2,7 +2,7 @@ import { router } from "@inertiajs/react";
 
 // Functions
 
-import SetErrorOnInput from "../../../../Utils/Libs/SetErrorOnInput";
+import SetErrorOnInput from "../../../../../Utils/Libs/SetErrorOnInput";
 
 const LoginUser = (param, setErrors, setSendRequest) => {
     const username = document.getElementById("email").value;

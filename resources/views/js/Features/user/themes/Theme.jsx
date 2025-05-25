@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { router } from '@inertiajs/react';
-import navigate from "../../Utils/Libs/navigate";
+import navigate from "../../../Utils/Libs/navigate";
 const Theme = ({ children }) => {
     return (
         <main>
