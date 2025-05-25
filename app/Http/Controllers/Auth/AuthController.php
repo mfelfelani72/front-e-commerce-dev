@@ -15,15 +15,13 @@ class AuthController extends Controller
     }
     public function loginUser(Request $request)
     {
-
-
-
-
+        $parameter = $request->all();
+        
         $method = 'post';
         $endPoint =  config('apiRoutes.user_login');
         $parameters = [
-            'email' => 'value',
-            'password' => 'value',
+            'email' => $parameter["email"],
+            'password' => $parameter["password"],
         ];
         $headers = [
             "Accept-Version" => 1,
