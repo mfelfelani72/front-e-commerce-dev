@@ -17,5 +17,6 @@ Route::controller(HomeController::class)->group(function () {
 Route::controller(AuthController::class)->group(function () {
 
     Route::get('/auth/login', 'login')->name("login");
+    Route::post('/auth/loginUser', 'loginUser')->name('loginUser');
     Route::get('/auth/register', 'register')->name("register");
 });
