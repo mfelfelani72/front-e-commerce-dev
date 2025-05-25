@@ -10,7 +10,14 @@ class AuthController extends Controller
     public function login()
     {
         return inertia('containers/Login', [
-            "message" => "mohammad"
+            "message" => "mohammad - login"
+        ]);
+    }
+
+    public function register()
+    {
+        return inertia('containers/Register', [
+            "message" => "mohammad - register"
         ]);
     }
 }

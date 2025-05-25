@@ -13,8 +13,9 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/home2', 'index2');
 });
 
-
+// auth
 Route::controller(AuthController::class)->group(function () {
 
-    Route::get('/auth/login', 'login');
+    Route::get('/auth/login', 'login')->name("login");
+    Route::get('/auth/register', 'register')->name("register");
 });
