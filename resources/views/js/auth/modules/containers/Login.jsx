@@ -3,15 +3,15 @@ import { useTranslation } from 'react-i18next';
 
 // Components
 
-import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../../public/core/components/Icon.jsx"
-import { GoogleButton, SubmitButton, TextButton } from '../../../../../../public/core/components/Button.jsx';
-import { InputEmail, InputPassword } from '../../../../../../public/core/components/Input.jsx';
-import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
+import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../core/components/Icon.jsx"
+import { GoogleButton, SubmitButton, TextButton } from '../../../core/components/Button.jsx';
+import { InputEmail, InputPassword } from '../../../core/components/Input.jsx';
+import LoaderDotSpinner from '../../../core/components/LoaderDotSpinner.jsx';
 
 // Functions
 
-import navigate from '../../../../../../app/Utils/Libs/navigate';
-import EnableButtonControl from '../../../../../../app/Utils/Libs/EnableButtonControl.js';
+import navigate from '../../../Utils/Libs/navigate.js';
+import EnableButtonControl from '../../../Utils/Libs/EnableButtonControl.js';
 import LoginUser from '../utils/Libs/LoginUser.js';
 
 // Images

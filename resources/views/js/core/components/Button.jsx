@@ -7,7 +7,7 @@ import { GoogleLogo } from "./Icon"
 
 // Functions
 
-import { cn } from '../../../app/Utils/Libs/cn'
+import { cn } from '../../Utils/Libs/cn'
 
 export const GoogleButton = ({ classname, ...props }) => {
     // hooks

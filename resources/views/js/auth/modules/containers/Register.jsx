@@ -4,14 +4,14 @@ import { useTranslation } from 'react-i18next';
 
 // Components
 
-import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../../public/core/components/Icon.jsx"
-import { GoogleButton, SubmitButton, TextButton } from '../../../../../../public/core/components/Button.jsx';
-import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
-import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
+import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../core/components/Icon.jsx"
+import { GoogleButton, SubmitButton, TextButton } from '../../../core/components/Button.jsx';
+import { InputEmail, InputPassword, InputRePassword } from '../../../core/components/Input.jsx';
+import LoaderDotSpinner from '../../../core/components/LoaderDotSpinner.jsx';
 
 // Functions
 
-import navigate from '../../../../../../app/Utils/Libs/navigate';
+import navigate from '../../../Utils/Libs/navigate.js';
 
 // Images
 

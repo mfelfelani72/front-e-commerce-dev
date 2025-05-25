@@ -2,7 +2,7 @@ import "./bootstrap";
 import { createInertiaApp } from "@inertiajs/react";
 import { createRoot } from "react-dom/client";
 import { I18nextProvider } from 'react-i18next';
-import i18n from '../../app/Utils/services/i18n';
+import i18n from '../../resources/views/js/Utils/services/i18n/index';
 import AdminTheme from "../views/js/admin/themes/Theme";
 import AuthTheme from "../views/js/auth/themes/Theme";
 import UserTheme from "../views/js/user/themes/Theme";

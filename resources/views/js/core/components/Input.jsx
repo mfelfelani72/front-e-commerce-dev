@@ -6,7 +6,7 @@ import { CloseSquareIcon, DangerIcon, EmailIcon, ShowIcon, HideIcon, LockIcon } 
 
 // Functions
 
-import { cn } from "../../../app/Utils/Libs/cn";
+import { cn } from "../../Utils/Libs/cn";
 
 const handleClear = (id, first_id, secound_id, afterFunction) => {
     const Button1 = document.getElementById(first_id);

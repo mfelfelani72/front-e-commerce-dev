@@ -1,5 +1,5 @@
-import core_en from "../../../../public/core/utils/services/i18n/en";
-import auth_en from "../../../../resources/views/js/auth/modules/utils/services/i18n/en";
+import core_en from "../../../core/utils/services/i18n/en";
+import auth_en from "../../../auth/modules/utils/services/i18n/en";
 
 const global_en = {
     dashboard: "Dashboard",

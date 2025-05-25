@@ -3,7 +3,7 @@ import { Head, Link } from "@inertiajs/react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import UserLayout from '../../themes/Theme'; // Import your user layout
-import navigate from "../../../../../../app/Utils/Libs/navigate";
+import navigate from "../../../Utils/Libs/navigate";
 
 const Home = ({ ...props }) => {
     // hooks

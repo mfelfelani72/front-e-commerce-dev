@@ -1,12 +1,8 @@
 import { router } from "@inertiajs/react";
+
 // Functions
 
-import { ConnectToServer } from "../../../../../../../app/Utils/services/api/ConnectToServer.js";
-import SetErrorOnInput from "../../../../../../../app/Utils/Libs/SetErrorOnInput.js";
-
-// Constants
-
-import { userLogin } from "../constants/EndPoints.js";
+import SetErrorOnInput from "../../../../Utils/Libs/SetErrorOnInput";
 
 const LoginUser = (param, setErrors, setSendRequest) => {
     const username = document.getElementById("email").value;
