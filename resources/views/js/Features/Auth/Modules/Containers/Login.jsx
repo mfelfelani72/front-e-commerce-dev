@@ -12,7 +12,7 @@ import LoaderDotSpinner from '../../../../Core/Components/LoaderDotSpinner.jsx';
 
 import navigate from '../../../../Utils/Libs/navigate.js';
 import EnableButtonControl from '../../../../Utils/Libs/EnableButtonControl.js';
-import LoginUser from '../utils/Libs/LoginUser.js';
+import LoginUser from '../Utils/Libs/LoginUser.js';
 
 // Images
 
