@@ -5,13 +5,14 @@ import { useTranslation } from 'react-i18next';
 
 import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../../public/core/components/Icon.jsx"
 import { GoogleButton, SubmitButton, TextButton } from '../../../../../../public/core/components/Button.jsx';
-import { InputEmail, InputPassword, InputRePassword } from '../../../../../../public/core/components/Input.jsx';
+import { InputEmail, InputPassword } from '../../../../../../public/core/components/Input.jsx';
 import LoaderDotSpinner from '../../../../../../public/core/components/LoaderDotSpinner.jsx';
 
 // Functions
 
 import navigate from '../../../../../../app/Utils/Libs/navigate';
 import EnableButtonControl from '../../../../../../app/Utils/Libs/EnableButtonControl.js';
+import LoginUser from '../utils/Libs/LoginUser.js';
 
 // Images
 
@@ -33,7 +34,10 @@ const Login = () => {
 
   // functions
   const handleClick = () => {
+    if (!sendRequest)
+      LoginUser("password", setErrors, setSendRequest);
     setSendRequest(true)
+
   }
 
   return (

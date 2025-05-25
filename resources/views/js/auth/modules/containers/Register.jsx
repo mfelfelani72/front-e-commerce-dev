@@ -32,7 +32,10 @@ const Register = () => {
 
     // functions
     const handleClick = () => {
-        setSendRequest(true)
+        if (!sendRequest)
+            console.log("register")
+        setSendRequest(false)
+
     }
     return (
         <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-200 to-white'>
