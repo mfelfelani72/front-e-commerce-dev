@@ -14,6 +14,10 @@ import LoaderDotSpinner from '../../../../Core/Components/LoaderDotSpinner.jsx';
 import navigate from '../../../../Utils/Libs/navigate.js';
 import RegisterUser from '../Utils/Libs/RegisterUser.js';
 
+// Hooks
+
+import useDevice from '../../../../Utils/Hooks/useDevice.js';
+
 // Images
 
 import image from "../../../../../../../public/assets/image/register_cover.jpg"
@@ -39,6 +43,16 @@ const Register = () => {
         setSendRequest(true);
 
     }
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop
+    } = useDevice();
+
+    console.log(isDesktop)
     return (
         <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-200 to-white'>
 
