@@ -10,6 +10,7 @@ import useDevice from '../../../../Utils/Hooks/useDevice.js';
 
 const Register = () => {
 
+    // hooks
     const {
         type,
         orientation,
