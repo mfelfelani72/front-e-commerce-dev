@@ -28,8 +28,10 @@ const useDevice = () => {
             type = 'mobile';
         } else if (screenWidth >= 576 && screenWidth < 992) {
             type = 'ipad';
-        } else {
+        } else if (screenWidth >= 992 && screenWidth < 1920) {
             type = 'desktop';
+        } else {
+            type = 'tv';
         }
 
         return {
@@ -41,6 +43,7 @@ const useDevice = () => {
             isMobile: type === 'mobile',
             isIpad: type === 'ipad',
             isDesktop: type === 'desktop',
+            isTv: type === 'tv',
         };
     }, [screenWidth, screenHeight, isTouchDevice]);
 

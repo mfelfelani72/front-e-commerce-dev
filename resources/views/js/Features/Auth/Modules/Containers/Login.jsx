@@ -3,7 +3,9 @@ import React from 'react';
 // Components
 
 import LoginMoblie from "../Layouts/Mobile/Login";
+import LoginIpad from "../Layouts/Ipad/Login";
 import LoginDesktop from "../Layouts/Desktop/Login";
+import LoginTv from "../Layouts/Tv/Login";
 
 // Hooks
 
@@ -18,13 +20,16 @@ const Login = () => {
     screenWidth,
     isMobile,
     isIpad,
-    isDesktop
+    isDesktop,
+    isTv,
   } = useDevice();
 
   return (
     <>
       {isMobile && <LoginMoblie />}
+      {isIpad && <LoginIpad />}
       {isDesktop && <LoginDesktop />}
+      {isTv && <LoginTv />}
     </>
   )
 };
