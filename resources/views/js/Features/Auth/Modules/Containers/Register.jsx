@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
 // Components
 
 import RegisterMobile from '../Layouts/Mobile/Register.jsx';
+import RegisterIpad from '../Layouts/Ipad/Register.jsx';
 import RegisterDesktop from '../Layouts/Desktop/Register.jsx';
+import RegisterTv from '../Layouts/Tv/Register.jsx';
 
 // Hooks
 
@@ -17,13 +18,16 @@ const Register = () => {
         screenWidth,
         isMobile,
         isIpad,
-        isDesktop
+        isDesktop,
+        isTv,
     } = useDevice();
 
     return (
         <>
             {isMobile && <RegisterMobile />}
+            {isIpad && <RegisterIpad />}
             {isDesktop && <RegisterDesktop />}
+            {isTv && <RegisterTv />}
         </>
     )
 }

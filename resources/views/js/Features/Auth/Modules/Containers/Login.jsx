@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Components
 
 import LoginMoblie from "../Layouts/Mobile/Login";
