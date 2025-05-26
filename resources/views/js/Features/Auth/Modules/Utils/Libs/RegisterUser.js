@@ -26,7 +26,7 @@ const RegisterUser = async (setErrors, setSendRequest) => {
         setSendRequest(false);
         setErrors({
             email: response?.data?.errors?.email,
-            password: response?.data?.errors?.email,
+            password: response?.data?.errors?.password,
         });
 
         SetErrorOnInput({ type: "email" });
