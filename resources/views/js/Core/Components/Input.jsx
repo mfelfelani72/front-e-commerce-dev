@@ -320,6 +320,16 @@ export const InputRePassword = ({ ...props }) => {
                         </div>
                     </div>
                 </div>
+                <div
+                    id="danger_ch_confirm_password"
+                    className="hidden absolute top-[6px] rtl:left-0 ltr:right-0 items-center "
+                >
+                    <div className="p-2">
+                        <div className="flex">
+                            <DangerIcon width={"24"} height={"24"} color={"#d71e1e"} />
+                        </div>
+                    </div>
+                </div>
                 <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
                     <div className="flex">
                         <LockIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />

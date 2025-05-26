@@ -31,6 +31,7 @@ const RegisterUser = async (setErrors, setSendRequest) => {
         });
 
         SetErrorOnInput({ type: "email" });
+        SetErrorOnInput({ type: "ch_confirm_password" });
     }
 };
 
