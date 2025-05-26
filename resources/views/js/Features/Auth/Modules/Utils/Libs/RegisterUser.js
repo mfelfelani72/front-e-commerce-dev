@@ -13,17 +13,18 @@ const RegisterUser = async (setErrors, setSendRequest) => {
     };
 
     const response = await axios.post("/auth/registerUser", parameter);
-    console.log(response);
 
     if (response?.data?.return) {
         sessionStorage.setItem("session_id", response?.data?.record?.token);
         sessionStorage.setItem("key", response?.data?.record?.user?.id);
         sessionStorage.setItem("username", response?.data?.record?.user?.email);
+
         navigate("/home", true);
+
         setSendRequest(false);
     } else if (response?.data?.return === false) {
-        console.log(response?.data);
         setSendRequest(false);
+
         setErrors({
             email: response?.data?.errors?.email,
             password: response?.data?.errors?.password,
