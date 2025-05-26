@@ -9,6 +9,7 @@ import { InputEmail, InputPassword, InputRePassword } from '../../../../../Core/
 import LoaderDotSpinner from '../../../../../Core/Components/LoaderDotSpinner.jsx';
 
 // Functions
+
 import navigate from '../../../../../Utils/Libs/navigate.js';
 import RegisterUser from '../../Utils/Libs/RegisterUser.js';
 
