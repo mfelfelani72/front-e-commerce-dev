@@ -7,16 +7,16 @@ const SetErrorOnInput = (object) => {
   const input = document.getElementById(id);
   // email
   if (type === "email") {
-    input.classList.add("border-Error-500");
-    input.classList.remove("border-secondary/100");
+    input.classList.add("border-rose-500");
+    input.classList.remove("border-gray-200");
     document.getElementById("danger_email").classList.remove("hidden");
     document.getElementById("close_email").classList.add("hidden");
     document.getElementById("input_email_validate").classList.remove("hidden");
 
     // password
   } else if (type === "password") {
-    input.classList.remove("border-secondary-100");
-    input.classList.add("border-Error-500");
+    input.classList.remove("border-gray-200");
+    input.classList.add("border-rose-500");
     document.getElementById("danger_password").classList.remove("hidden");
     document.getElementById("close_password").classList.add("hidden");
     document
@@ -24,23 +24,23 @@ const SetErrorOnInput = (object) => {
       .classList.remove("hidden");
     // mobile
   } else if (type === "mobile") {
-    input.classList.remove("border-secondary/100");
-    input.classList.add("border-Error-500");
+    input.classList.remove("border-gray-200");
+    input.classList.add("border-rose-500");
     document.getElementById("danger_mobile").classList.remove("hidden");
     document.getElementById("close_mobile").classList.add("hidden");
     document.getElementById("input_mobile_validate").classList.remove("hidden");
     // telegram
   } else if (type === "telegram") {
-    input.classList.remove("border-secondary-100");
-    input.classList.add("border-Error/500");
+    input.classList.remove("border-gray-200");
+    input.classList.add("border-red-500");
     document.getElementById("danger_telegram").classList.remove("hidden");
     document.getElementById("close_telegram").classList.add("hidden");
     document
       .getElementById("input_telegram_validate")
       .classList.remove("hidden");
   } else if (type === "drawer") {
-    input.classList.remove("border-secondary-100");
-    input.classList.add("border-Error-500");
+    input.classList.remove("border-gray-200");
+    input.classList.add("border-rose-500");
 
     document
       .getElementById("input_drawer_validate-" + input_id)

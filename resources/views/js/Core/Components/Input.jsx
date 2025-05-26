@@ -121,10 +121,12 @@ export const InputEmail = ({ className, ...props }) => {
                 </div>
                 <div
                     id="danger_email"
-                    className="hidden absolute top-[6px] rtl:left-[1px] ltr:right-[1px] rtl:pl-3 ltr:pr-3 items-center "
+                    className="hidden absolute top-[6px] rtl:left-0 ltr:right-0 items-center "
                 >
-                    <div className="flex">
-                        <DangerIcon width={"24"} height={"24"} color={"#d71e1e"} />
+                    <div className="p-2">
+                        <div className="flex">
+                            <DangerIcon width={"24"} height={"24"} color={"#d71e1e"} />
+                        </div>
                     </div>
                 </div>
                 <div className="absolute inset-y-0 rtl:right-0 ltr:left-0 rtl:pr-3 ltr:pl-3 flex items-center pointer-events-none">
