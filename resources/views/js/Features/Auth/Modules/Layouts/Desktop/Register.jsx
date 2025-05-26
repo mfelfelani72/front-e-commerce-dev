@@ -40,38 +40,38 @@ const Login = () => {
     }
     return (
         <>
-            <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-200 to-white'>
+            <div className='flex flex-row w-screen h-screen items-center justify-center  bg-gradient-to-br from-violet-200 py-1 to-white'>
 
-                <div className='w-[64rem] h-[42rem] relative'>
+                <div className='w-[56rem] max-h-[38rem] h-full relative'>
 
                     {/* image */}
-                    <div className='absolute inset-y-0 left-[0.5rem] shadow-xl z-10'>
-                        <img src={image} alt='image' className='w-[32rem] h-full rounded-bl-2xl rounded-tl-2xl' />
+                    <div className='absolute inset-y-0 left-[1rem] shadow-xl z-10'>
+                        <img src={image} alt='image' className='w-[28rem] h-full rounded-bl-2xl rounded-tl-2xl' />
                     </div>
 
-                    <div className='absolute bg-purple-700 opacity-30 inset-y-0 left-[0.5rem] rounded-2xl z-20 w-[32rem] h-full'>
+                    <div className='absolute bg-purple-700 opacity-30 inset-y-0 left-[1rem] rounded-2xl z-20 w-[28rem] h-full'>
                     </div>
 
                     {/* register form */}
 
-                    <div className='absolute inset-y-0 right-[1.5rem] rounded-bl-4xl rounded-tl-4xl rounded-br-2xl rounded-tr-2xl bg-gray-50 w-[32rem] h-full inline-flex flex-col justify-center items-center px-14 py-8 shadow-xl z-30'>
+                    <div className='absolute inset-y-0 right-[1rem] rounded-bl-4xl rounded-tl-4xl rounded-br-2xl rounded-tr-2xl bg-gray-50 w-[28rem] h-full inline-flex flex-col justify-center items-center px-14 py-4 shadow-xl z-30'>
 
                         <Logo width="36" height="48" />
 
                         <h1 className='font-bold text-2xl'>{t("create_account")}</h1>
 
-                        <GoogleButton type="register" classname={"py-2 mt-4"} />
+                        <GoogleButton type="register" classname={"py-2 mt-2"} />
 
                         {/* line    Or    line */}
 
-                        <div className='flex flex-row mt-3 gap-6 items-center'>
+                        <div className='flex flex-row mt-2 gap-6 items-center'>
                             <div className='w-28 h-0 outline outline-gray-200'></div>
                             <div className='font-medium text-sm text-gray-500'>{t("or")}</div>
                             <div className='w-28 h-0 outline outline-gray-200'></div>
                         </div>
 
                         {/* form */}
-                        <div className='flex flex-col items-start w-full mt-1'>
+                        <div className='flex flex-col items-start w-full'>
                             <div className='w-full'>
                                 <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" error={errors["email"]} />
                             </div>
@@ -90,7 +90,7 @@ const Login = () => {
                                 />
                             </div>
 
-                            <div className='w-full mt-10'>
+                            <div className='w-full mt-7'>
                                 <SubmitButton
                                     id="register"
                                     onClick={() => {
