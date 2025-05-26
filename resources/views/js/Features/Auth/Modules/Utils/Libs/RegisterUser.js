@@ -30,8 +30,9 @@ const RegisterUser = async (setErrors, setSendRequest) => {
             password: response?.data?.errors?.password,
         });
 
-        SetErrorOnInput({ type: "email" });
-        SetErrorOnInput({ type: "ch_confirm_password" });
+        if (response?.data?.errors?.email) SetErrorOnInput({ type: "email" });
+        if (response?.data?.errors?.password)
+            SetErrorOnInput({ type: "ch_confirm_password" });
     }
 };
 
