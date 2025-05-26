@@ -77,12 +77,12 @@ export const InputEmail = ({ className, ...props }) => {
         <>
             <label
                 htmlFor={props?.id}
-                className="text-xs font-medium text-gray-500 px-1 mb-2"
+                className="text-xs font-medium text-gray-500 px-1 pb-2"
             >
                 {props?.label}
             </label>
 
-            <div className="relative">
+            <div className="relative mt-1">
 
                 <input
                     {...props}
@@ -90,7 +90,7 @@ export const InputEmail = ({ className, ...props }) => {
                     type="email"
                     placeholder={props?.placeholder}
                     className={cn(
-                        "autofill-input-dark peer placeholder-gray-900 w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400  justify-between items-center relative",
+                        "autofill-input-dark peer placeholder:text-gray-400 placeholder:text-sm w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400  justify-between items-center relative",
                         className
                     )}
                     onBlur={() => {
@@ -175,9 +175,9 @@ export const InputPassword = ({ className, ...props }) => {
                             {...props}
                             type="password"
                             minLength={5}
-                            placeholder="xxxx xxxx xxxx xxxx"
+                            placeholder="XXXXX"
                             className={cn(
-                                "autofill-input-dark peer placeholder-gray-900 w-full px-[2.5rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 justify-between items-center relative",
+                                "autofill-input-dark peer placeholder:text-gray-400 placeholder:text-sm w-full px-[2.5rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 justify-between items-center relative",
                                 className
                             )}
                             onBlur={() => {
@@ -257,8 +257,8 @@ export const InputPassword = ({ className, ...props }) => {
                         {...props}
                         type="password"
                         minLength={5}
-                        placeholder="xxxx xxxx xxxx xxxx"
-                        className="autofill-input-dark peer placeholder-gray-900 w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
+                        placeholder="xxxxx"
+                        className="autofill-input-dark peer placeholder:text-gray-400 placeholder:text-sm w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 invalid:focus:border-Error-400 invalid:border-Error-400 justify-between items-center relative"
                     />
                     <div className=" absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center cursor-pointer">
                         <div
@@ -303,8 +303,8 @@ export const InputRePassword = ({ ...props }) => {
                 <input
                     id={props?.id}
                     type="password"
-                    placeholder="xxxx xxxx xxxx xxxx"
-                    className="autofill-input-dark placeholder-gray-900 w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 justify-between items-center relative"
+                    placeholder="xxxxx"
+                    className="autofill-input-dark placeholder:text-gray-400 placeholder:text-sm w-full px-[2.7rem] py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400 justify-between items-center relative"
                     onChange={(event) => comparePassword(event, props?.button_id)}
                 />
                 <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 px-3 flex items-center cursor-pointer">
