@@ -133,7 +133,7 @@ export const InputEmail = ({ className, ...props }) => {
                     </div>
                 </div>
                 {/* input validate */}
-                {typeof props?.error !== "undefined" && (
+                {props?.error !== "" && (
                     <div
                         id="input_email_validate"
                         className="peer-focus:hidden absolute inset-x-0 mt-1 mx-1"
@@ -323,7 +323,15 @@ export const InputRePassword = ({ ...props }) => {
                         <LockIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
                     </div>
                 </div>
-
+                {/* input validate */}
+                {props?.error !== "" && (
+                    <div
+                        id="input_password_validate"
+                        className="peer-focus:hidden absolute mt-1 mx-1"
+                    >
+                        <div className="text-red-500 text-xs font-medium">{t(props?.error)}</div>
+                    </div>
+                )}
                 <div id="error_message" className="hidden absolute mt-1 mx-1">
                     <div className="text-red-500 text-xs font-medium">
                         {t("error_re_password")}

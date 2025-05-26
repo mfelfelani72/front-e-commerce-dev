@@ -37,7 +37,6 @@ const Login = () => {
     if (!sendRequest)
       LoginUser("password", setErrors, setSendRequest);
     setSendRequest(true)
-
   }
 
   return (
@@ -95,7 +94,7 @@ const Login = () => {
               <div className='w-full mt-10'>
                 <SubmitButton
                   id="login"
-                  onClick={() => {
+                  onClick={(e) => {
                     handleClick();
                   }}
                   className="hidden relative"

@@ -7,6 +7,10 @@ if (!function_exists('connectToServer')) {
     function connectToServer($method, $endPoint, $parameters = [], $headers = [], $route = '')
     {
         try {
+            
+            if ($headers == "")
+                $headers = config('api.headers');
+
             $http = Http::withHeaders($headers);
 
             if ($method === 'post') {

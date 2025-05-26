@@ -1,10 +1,11 @@
-import { router } from "@inertiajs/react";
+import axios from "axios";
 
 // Functions
 
 import SetErrorOnInput from "../../../../../Utils/Libs/SetErrorOnInput";
+import navigate from "../../../../../Utils/Libs/navigate";
 
-const LoginUser = (param, setErrors, setSendRequest) => {
+const LoginUser = async (param, setErrors, setSendRequest) => {
     const username = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -12,27 +13,20 @@ const LoginUser = (param, setErrors, setSendRequest) => {
         email: username,
         password: password,
     };
-    console.log("asdsa")
-    router.post("loginUser", parameter);
-    // ConnectToServer("post", userLogin, parameter, "", "login").then(
-    //   (response) => {
-    //     console.log(response);
-    //     setSendRequest(false);
-    //     // if (response?.data?.return) {
-    //     //   sessionStorage.setItem("session_id", response?.data?.user_token);
-    //     //   sessionStorage.setItem("key", response?.data?.username);
-    //     //   setSendRequest(false);
-    //     //   navigate("/dashboard/home", {
-    //     //     state: { to_location: "/dashboard/home" },
-    //     //   });
-    //     // } else if (response?.data?.return === false) {
-    //     //   console.log(response?.data)
-    //     //   setSendRequest(false);
-    //     //   setErrors({ password: "login_failed" });
-    //     //   SetErrorOnInput({ type: param });
-    //     // }
-    //   }
-    // );
+
+    const response = await axios.post("/auth/loginUser", parameter);
+
+    if (response?.data?.return) {
+        sessionStorage.setItem("session_id", response?.data?.record?.token);
+        sessionStorage.setItem("key", response?.data?.record?.user?.id);
+        sessionStorage.setItem("username", response?.data?.record?.user?.email);
+        navigate("/home", true);
+        setSendRequest(false);
+    } else if (response?.data?.return === false) {
+        setSendRequest(false);
+        setErrors({ password: response?.data?.message });
+        SetErrorOnInput({ type: param });
+    }
 };
 
 export default LoginUser;

@@ -15,24 +15,11 @@ class AuthController extends Controller
     }
     public function loginUser(Request $request)
     {
-        $parameter = $request->all();
-        
-        $method = 'post';
-        $endPoint =  config('apiRoutes.user_login');
-        $parameters = [
-            'email' => $parameter["email"],
-            'password' => $parameter["password"],
-        ];
-        $headers = [
-            "Accept-Version" => 1,
-            "Accept" => "application/json",
-            "Access-Control-Allow-Origin" => "*",
-            "Content-Type" => "application/json; charset=utf-8",
-        ];
-        $route = 'some-route-name';
+        $parameters = $request->all();
 
-        $response = connectToServer($method, $endPoint, $parameters, $headers, $route);
-        dd($response);
+        $response = connectToServer("post", config('apiRoutes.user_login'), $parameters, "", "loginUser");
+
+        return response()->json($response);
     }
 
     public function register()
@@ -40,5 +27,14 @@ class AuthController extends Controller
         return inertia('Containers/Register', [
             "message" => "mohammad - register"
         ]);
+    }
+
+    public function registerUser(Request $request)
+    {
+        $parameters = $request->all();
+
+        $response = connectToServer("post", config('apiRoutes.user_register'), $parameters, "", "registerUser");
+
+        return response()->json($response);
     }
 }

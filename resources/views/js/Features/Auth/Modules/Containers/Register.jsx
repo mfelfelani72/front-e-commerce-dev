@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useTranslation } from 'react-i18next';
 
@@ -12,6 +12,7 @@ import LoaderDotSpinner from '../../../../Core/Components/LoaderDotSpinner.jsx';
 // Functions
 
 import navigate from '../../../../Utils/Libs/navigate.js';
+import RegisterUser from '../Utils/Libs/RegisterUser.js';
 
 // Images
 
@@ -26,6 +27,7 @@ const Register = () => {
     const { t } = useTranslation();
 
     // states
+    const [errors, setErrors] = useState([]);
 
     const sendRequest = useAppStore((state) => state.sendRequest);
     const setSendRequest = useAppStore((state) => state.setSendRequest);
@@ -33,8 +35,8 @@ const Register = () => {
     // functions
     const handleClick = () => {
         if (!sendRequest)
-            console.log("register")
-        setSendRequest(false)
+            RegisterUser(setErrors, setSendRequest);
+        setSendRequest(true);
 
     }
     return (
@@ -71,7 +73,7 @@ const Register = () => {
                     {/* form */}
                     <div className='flex flex-col items-start w-full mt-1'>
                         <div className='w-full'>
-                            <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" />
+                            <InputEmail id="email" label={t("email_address")} placeholder="mfelfelani72@gmail.com" theme="light" error={errors["email"]} />
                         </div>
                         <div className='mt-4 w-full'>
                             <InputPassword
@@ -83,7 +85,9 @@ const Register = () => {
                         </div>
                         <div className='mt-4 w-full'>
                             <InputRePassword id="ch_confirm_password" label={t("re_password")}
-                                theme={"light"} button_id="register" />
+                                theme={"light"} button_id="register"
+                                error={errors["password"]}
+                            />
                         </div>
 
                         <div className='w-full mt-10'>
