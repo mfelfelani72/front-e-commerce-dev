@@ -34,6 +34,11 @@ const Theme = ({ children }) => {
                         </div>
                     </div>
                 </div>
+                <div className="bg-gray-50/80 w-full pb-1 select-none border-b border-gray-100 inline-flex items-center">
+                    <div className="flex flex-row py-1 h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
+                        dsfds
+                    </div>
+                </div>
 
             </header>
 

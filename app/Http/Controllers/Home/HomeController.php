@@ -9,11 +9,9 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
-
-
     public function index()
     {
-        $response = Http::get('https://dog.ceo/api/breed/hound/list');
+        // $response = Http::get('https://dog.ceo/api/breed/hound/list');
         // dd($response->json()["message"]);
         // try {
         //     // استفاده از HTTP کلاینت خود Laravel (ترجیح‌داده شده)
@@ -42,7 +40,14 @@ class HomeController extends Controller
         //     ], 500);
         // }
         return Inertia::render('Home/HomeLanding', [
-            'message' => $response->json()["message"]
+            // 'message' => $response->json()["message"]
+            'message' => "message"
+        ]);
+    }
+    public function test()
+    {
+        return Inertia::render('Home/Test', [
+            'message' => "mohammad - test"
         ]);
     }
 }

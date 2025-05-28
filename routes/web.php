@@ -4,10 +4,14 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
 
-
+// admin
 Route::resource('/admin', HomeController::class);
 
+// user
 Route::controller(HomeController::class)->group(function () {
+    // test
+    Route::get('/mohammad/test', 'test');
+
     Route::get('/', 'index');
 });
 
