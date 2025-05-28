@@ -42,7 +42,6 @@ class HomeController extends Controller
         //     ], 500);
         // }
         return Inertia::render('Home/HomeLanding', [
-            "theme" => true,
             'message' => $response->json()["message"]
         ]);
     }

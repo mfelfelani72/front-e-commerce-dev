@@ -1,6 +1,7 @@
-import { Link } from "@inertiajs/react";
-import { router } from '@inertiajs/react';
-import navigate from "../../../Utils/Libs/navigate";
+// Components
+
+import { Logo } from "../../../Core/Components/Icon"
+
 const Theme = ({ children }) => {
     return (
         <main>
@@ -13,7 +14,18 @@ const Theme = ({ children }) => {
                         <div>English</div>
                     </div>
                 </div>
-                {/* menus */}
+                {/* menu */}
+                <div className="bg-gray-50/80 py-2 w-full select-none">
+                    <div className="flex flex-row items-center justify-between mx-auto w-[calc(100%-30.5rem)] pt-5" >
+                        <div className="flex flex-row gap-2 items-center">
+                            <Logo width="26" height="26" />
+                            <h1 className="font-bold text-2xl pb-2 capitalize text-violet-900">
+                                e-commerce
+                            </h1>
+                        </div>
+                        <div>sadsa</div>
+                    </div>
+                </div>
 
             </header>
 
