@@ -2,8 +2,72 @@
 
 import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../Core/Components/Icon"
 import { InputSearch } from "../../../Core/Components/Input";
+import NavMenu from "./Components/NavMenu";
 
 const Theme = ({ children }) => {
+
+    const menuItems = [
+        {
+            name: 'Home',
+            href: '/',
+            subItems: []
+        },
+        {
+            name: 'Products',
+            href: '/products',
+            subItems: [
+                {
+                    name: 'Electronics',
+                    items: [
+                        { name: 'Smartphones', href: '/electronics/smartphones' },
+                        { name: 'Laptops', href: '/electronics/laptops' },
+                        { name: 'Accessories', href: '/electronics/accessories' }
+                    ]
+                },
+                {
+                    name: 'Electronics',
+                    items: [
+                        { name: 'Smartphones', href: '/electronics/smartphones' },
+                        { name: 'Laptops', href: '/electronics/laptops' },
+                        { name: 'Accessories', href: '/electronics/accessories' }
+                    ]
+                },
+                {
+                    name: 'Fashion',
+                    items: [
+                        { name: 'Men', href: '/fashion/men' },
+                        { name: 'Women', href: '/fashion/women' },
+                        { name: 'Kids', href: '/fashion/kids' }
+                    ]
+                }
+            ]
+        },
+        {
+            name: 'Services',
+            href: '/services',
+            subItems: [
+                {
+                    name: 'Design',
+                    items: [
+                        { name: 'Web Design', href: '/design/web' },
+                        { name: 'Graphic Design', href: '/design/graphic' }
+                    ]
+                },
+                {
+                    name: 'Development',
+                    items: [
+                        { name: 'Web Development', href: '/development/web' },
+                        { name: 'Mobile Apps', href: '/development/mobile' }
+                    ]
+                }
+            ]
+        },
+        {
+            name: 'Contact',
+            href: '/contact',
+            subItems: []
+        },
+    ];
     return (
         <main>
 
@@ -34,9 +98,9 @@ const Theme = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-50/80 w-full pb-1 select-none border-b border-gray-100 inline-flex items-center">
-                    <div className="flex flex-row py-1 h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
-                        dsfds
+                <div className="w-full py-2 select-none border-b border-gray-100 inline-flex items-center bg-white shadow-sm relative justify-between">
+                    <div className="flex flex-row h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
+                        <NavMenu menuItems={menuItems} />
                     </div>
                 </div>
 

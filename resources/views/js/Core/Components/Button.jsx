@@ -9,6 +9,21 @@ import { GoogleLogo } from "./Icon"
 
 import { cn } from '../../Utils/Libs/cn'
 
+export const Button = ({ children, className, ...props }) => {
+    return (
+        <>
+            <button
+                {...props}
+                className={cn(
+                    "h-14 w-full flex flex-row justify-center items-center rounded-2xl bg-violet-500 hover:bg-violet-400 focus:bg-violet-600 focus:outline-none select-none text-white cursor-pointer",
+                    className
+                )}
+            >
+                <div className="flex flex-row gap-2 ">{children}</div>
+            </button>
+        </>
+    );
+};
 export const GoogleButton = ({ classname, ...props }) => {
     // hooks
     const { t } = useTranslation();

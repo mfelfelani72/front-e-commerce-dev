@@ -1,0 +1,62 @@
+import React from 'react'
+
+// Components
+
+import { Button } from "../../../../Core/Components/Button";
+
+const NavMenu = ({ ...props }) => {
+    return (
+        <>
+            <div className="flex items-center">
+                <Button className={"w-32 h-11 text-sm font-medium rounded-md"} >All Categories</Button>
+                <div className="hidden md:flex space-x-1 ml-10">
+                    {props?.menuItems.map((item) => (
+                        <div key={item.name} className="group relative">
+                            <a
+                                href={item.href}
+                                className="text-gray-700 hover:text-violet-600 px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
+                            >
+                                {item.name}
+                                {item.subItems.length > 0 && (
+                                    // icon
+                                    <div
+                                        className="ml-1 h-4 w-4 text-gray-500 group-hover:text-violet-600 transition-transform duration-200 group-hover:rotate-180"
+                                    />
+                                )}
+                            </a>
+
+                            {/* Mega Menu */}
+                            {item.subItems.length > 0 && (
+                                <div className="absolute left-0 top-8 z-20 w-[800px] origin-top transform overflow-hidden opacity-0 scale-y-0 h-0 group-hover:opacity-100 group-hover:scale-y-100 group-hover:h-auto transition-all duration-300 ease-out border border-violet-50 rounded-md shadow-xl">
+                                    <div className="bg-white shadow-xl rounded-b-lg p-6 grid grid-cols-2 gap-6 mt-0 border-t-2 border-violet-600 animate-slideUp">
+                                        {item.subItems.map((category, idx) => (
+                                            <div key={idx} className="space-y-2">
+                                                <h3 className="text-lg font-semibold text-gray-900 border-b border-violet-800 pb-2 mb-2">
+                                                    {category.name}
+                                                </h3>
+                                                <ul className="space-y-2">
+                                                    {category.items.map((subItem) => (
+                                                        <li key={subItem.name}>
+                                                            <a
+                                                                href={subItem.href}
+                                                                className="text-gray-700 hover:text-violet-600 block px-2 py-1 text-sm transition-colors duration-150"
+                                                            >
+                                                                {subItem.name}
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default NavMenu
