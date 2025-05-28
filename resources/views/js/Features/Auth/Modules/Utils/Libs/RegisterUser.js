@@ -19,7 +19,7 @@ const RegisterUser = async (setErrors, setSendRequest) => {
         sessionStorage.setItem("key", response?.data?.record?.user?.id);
         sessionStorage.setItem("username", response?.data?.record?.user?.email);
 
-        navigate("/home", true);
+        navigate("/", true);
 
         setSendRequest(false);
     } else if (response?.data?.return === false) {

@@ -21,28 +21,15 @@ const Home = ({ ...props }) => {
                 />
                 <meta
                     name="description"
-                    content="A Computer Science portal for geeks. 
-         It contains well written, well thought 
-         and well explained computer science and 
-         programming articles, quizzes and practice/competitive
-         programming/company interview Questions."
+                    content="content"
                 />
                 <meta
                     http-equiv="Content-Type"
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div onClick={()=>navigate("home2")} className="py-2 font-bold text-teal-500 flex flex-row w-full justify-center">
-                This is Home and this is props{" "} {t("login")}
-                <div className="flex flex-row gap-6">
-                    {props?.message?.map((item, index) => (
-                        <div key={index}>{item}</div>
-                    ))}
-                </div>
-            </div>
         </>
     );
 };
 
-// Home.layout = UserLayout;
 export default Home;

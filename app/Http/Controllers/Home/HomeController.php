@@ -41,42 +41,7 @@ class HomeController extends Controller
         //         'message' => 'Internal server error!'
         //     ], 500);
         // }
-        return Inertia::render('home/Home', [
-            "theme" => true,
-            'message' => $response->json()["message"]
-        ]);
-    }
-    public function index2()
-    {
-        $response = Http::get('https://dog.ceo/api/breed/hound/list');
-        // dd($response->json()["message"]);
-        // try {
-        //     // استفاده از HTTP کلاینت خود Laravel (ترجیح‌داده شده)
-        //     $response = Http::timeout(30)->get('https://cat-fact.herokuapp.com/facts/random');
-
-        //     // اگر پاسخ موفقیت‌آمیز بود
-        //     if ($response->successful()) {
-        //         $data = $response->json();
-        //         return response()->json([
-        //             'status' => 'success',
-        //             'data' => $data
-        //         ]);
-        //     } else {
-        //         return response()->json([
-        //             'status' => 'error',
-        //             'message' => 'API request failed!'
-        //         ], 500);
-        //     }
-        // } catch (\Exception $e) {
-        //     // لاگ خطا (اختیاری)
-        //     dd('API Error: ' . $e->getMessage());
-
-        //     return response()->json([
-        //         'status' => 'error',
-        //         'message' => 'Internal server error!'
-        //     ], 500);
-        // }
-        return Inertia::render('home/Home2', [
+        return Inertia::render('Home/HomeLanding', [
             "theme" => true,
             'message' => $response->json()["message"]
         ]);

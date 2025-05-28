@@ -20,7 +20,7 @@ const LoginUser = async (param, setErrors, setSendRequest) => {
         sessionStorage.setItem("session_id", response?.data?.record?.token);
         sessionStorage.setItem("key", response?.data?.record?.user?.id);
         sessionStorage.setItem("username", response?.data?.record?.user?.email);
-        navigate("/home", true);
+        navigate("/", true);
         setSendRequest(false);
     } else if (response?.data?.return === false) {
         setSendRequest(false);

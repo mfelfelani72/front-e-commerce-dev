@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/admin', HomeController::class);
 
 Route::controller(HomeController::class)->group(function () {
-
-    Route::get('/home', 'index');
-    Route::get('/home2', 'index2');
+    Route::get('/', 'index');
 });
 
 // auth
