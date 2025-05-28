@@ -28,26 +28,31 @@ const NavMenu = ({ ...props }) => {
                             {/* Mega Menu */}
                             {item.subItems.length > 0 && (
                                 <div className="absolute left-0 top-8 z-20 w-[800px] origin-top transform overflow-hidden opacity-0 scale-y-0 h-0 group-hover:opacity-100 group-hover:scale-y-100 group-hover:h-auto transition-all duration-300 ease-out border border-violet-50 rounded-md shadow-xl">
-                                    <div className="bg-white shadow-xl rounded-b-lg p-6 grid grid-cols-2 gap-6 mt-0 border-t-2 border-violet-600 animate-slideUp">
-                                        {item.subItems.map((category, idx) => (
-                                            <div key={idx} className="space-y-2">
-                                                <h3 className="text-lg font-semibold text-gray-900 border-b border-violet-800 pb-2 mb-2">
-                                                    {category.name}
-                                                </h3>
-                                                <ul className="space-y-2">
-                                                    {category.items.map((subItem) => (
-                                                        <li key={subItem.name}>
-                                                            <a
-                                                                href={subItem.href}
-                                                                className="text-gray-700 hover:text-violet-600 block px-2 py-1 text-sm transition-colors duration-150"
-                                                            >
-                                                                {subItem.name}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        ))}
+                                    <div className='flex flex-row justify-between bg-white shadow-xl border-t-2 border-violet-600'>
+                                        <div className="w-full rounded-b-lg p-6 grid grid-cols-3 gap-6 mt-0 animate-slideUp">
+                                            {item.subItems.map((category, idx) => (
+                                                <div key={idx} className="space-y-2">
+                                                    <h3 className="text-lg font-semibold text-gray-900 border-b border-violet-800 pb-2 mb-2">
+                                                        {category.name}
+                                                    </h3>
+                                                    <ul className="space-y-2">
+                                                        {category.items.map((subItem) => (
+                                                            <li key={subItem.name}>
+                                                                <a
+                                                                    href={subItem.href}
+                                                                    className="text-gray-700 hover:text-violet-600 block px-2 py-1 text-sm transition-colors duration-150"
+                                                                >
+                                                                    {subItem.name}
+                                                                </a>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className='inline-flex items-end justify-center p-2'>
+                                            <img alt={item?.name} src={item?.picture} className='w-80 h-60 rounded-sm' />
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -55,6 +60,7 @@ const NavMenu = ({ ...props }) => {
                     ))}
                 </div>
             </div>
+
         </>
     )
 }

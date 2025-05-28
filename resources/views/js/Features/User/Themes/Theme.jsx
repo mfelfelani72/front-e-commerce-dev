@@ -4,17 +4,22 @@ import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../Core/Component
 import { InputSearch } from "../../../Core/Components/Input";
 import NavMenu from "./Components/NavMenu";
 
+// Image
+import image from "../../../../../../public/assets/image/register_cover.jpg"
+
 const Theme = ({ children }) => {
 
     const menuItems = [
         {
             name: 'Home',
             href: '/',
-            subItems: []
+            picture: "",
+            subItems: [],
         },
         {
             name: 'Products',
             href: '/products',
+            picture: image,
             subItems: [
                 {
                     name: 'Electronics',
@@ -45,6 +50,7 @@ const Theme = ({ children }) => {
         {
             name: 'Services',
             href: '/services',
+            picture: image,
             subItems: [
                 {
                     name: 'Design',
@@ -65,6 +71,7 @@ const Theme = ({ children }) => {
         {
             name: 'Contact',
             href: '/contact',
+            picture: "",
             subItems: []
         },
     ];

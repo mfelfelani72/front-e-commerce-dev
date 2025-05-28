@@ -1,9 +1,6 @@
 
-import { Head, Link } from "@inertiajs/react";
-import { useEffect } from "react";
+import { Head } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
-import UserLayout from '../../Themes/Theme'; // Import your user layout
-import navigate from "../../../../Utils/Libs/navigate";
 
 const Home = ({ ...props }) => {
     // hooks
