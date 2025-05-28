@@ -1,10 +1,10 @@
 // Components
 
-import { Logo } from "../../../Core/Components/Icon"
+import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../Core/Components/Icon"
 
 const Theme = ({ children }) => {
     return (
-        <main>
+        <main className="!bg-gray-50/80">
 
             <header className="w-full">
                 {/* violet banner */}
@@ -15,7 +15,7 @@ const Theme = ({ children }) => {
                     </div>
                 </div>
                 {/* menu */}
-                <div className="bg-gray-50/80 py-2 w-full select-none">
+                <div className="py-2 w-full select-none">
                     <div className="flex flex-row items-center justify-between mx-auto w-[calc(100%-30.5rem)] pt-5" >
                         <div className="flex flex-row gap-2 items-center">
                             <Logo width="26" height="26" />
@@ -23,7 +23,11 @@ const Theme = ({ children }) => {
                                 e-commerce
                             </h1>
                         </div>
-                        <div>sadsa</div>
+                        <div className="flex flex-row gap-6">
+                            <WishIcon width="24" height="24" color="#4a5565" count={1} />
+                            <ProfileIcon width="24" height="24" color="#4a5565" />
+                            <BasketIcon width="24" height="24" color="#4a5565" count={7}/>
+                        </div>
                     </div>
                 </div>
 

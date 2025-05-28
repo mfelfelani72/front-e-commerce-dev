@@ -295,6 +295,61 @@ export const LinkdinIcon = ({ ...props }) => {
             <svg width={props?.width} height={props?.height} viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.3333 4.03516C26.0406 4.03516 26.7189 4.31611 27.219 4.8162C27.719 5.3163 28 5.99458 28 6.70182V25.3685C28 26.0757 27.719 26.754 27.219 27.2541C26.7189 27.7542 26.0406 28.0352 25.3333 28.0352H6.66667C5.95942 28.0352 5.28115 27.7542 4.78105 27.2541C4.28095 26.754 4 26.0757 4 25.3685V6.70182C4 5.99458 4.28095 5.3163 4.78105 4.8162C5.28115 4.31611 5.95942 4.03516 6.66667 4.03516H25.3333ZM24.6667 24.7018V17.6352C24.6667 16.4823 24.2087 15.3768 23.3936 14.5616C22.5784 13.7464 21.4728 13.2885 20.32 13.2885C19.1867 13.2885 17.8667 13.9818 17.2267 15.0218V13.5418H13.5067V24.7018H17.2267V18.1285C17.2267 17.1018 18.0533 16.2618 19.08 16.2618C19.5751 16.2618 20.0499 16.4585 20.3999 16.8086C20.75 17.1586 20.9467 17.6334 20.9467 18.1285V24.7018H24.6667ZM9.17333 11.4485C9.76742 11.4485 10.3372 11.2125 10.7573 10.7924C11.1773 10.3723 11.4133 9.80257 11.4133 9.20849C11.4133 7.96849 10.4133 6.95516 9.17333 6.95516C8.57571 6.95516 8.00257 7.19256 7.57999 7.61514C7.1574 8.03772 6.92 8.61087 6.92 9.20849C6.92 10.4485 7.93333 11.4485 9.17333 11.4485ZM11.0267 24.7018V13.5418H7.33333V24.7018H11.0267Z" fill={props?.color} />
             </svg>
+        </>
+    );
+};
+export const ProfileIcon = ({ ...props }) => {
+    return (
+        <>
+            <svg width={props?.width} height={props?.height} viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" stroke={props?.color}></path>
+            </svg>
+        </>
+    );
+};
+export const WishIcon = ({ ...props }) => {
+    return (
+        <>
+            <div className="relative">
+                <svg width={props?.width} height={props?.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" stroke={props?.color}></path>
+                </svg>
+                {props?.count > 0 &&
+                    <>
+                        <span className="absolute inset-0 -mt-[0.05rem] left-[1.2rem] h-[0.85rem] w-[0.85rem] animate-ping bg-violet-600 rounded-full"></span>
+                        <span className="absolute inset-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-violet-600 text-white text-center font-semibold text-sm">
+                            {props?.count}
+                        </span>
+                    </>
+                }
+
+            </div>
+
+        </>
+    );
+};
+export const BasketIcon = ({ ...props }) => {
+    return (
+        <>
+            <div className="relative">
+                <svg width={props?.width} height={props?.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" stroke={props?.color}></path>
+                    <path d="M9 11v-5a3 3 0 0 1 6 0v5" stroke={props?.color}></path>
+                </svg>
+                {props?.count > 0 &&
+                    <>
+                        <span className="absolute inset-0 -mt-[0.05rem] left-[1.2rem] h-[0.85rem] w-[0.85rem] animate-ping bg-violet-600 rounded-full"></span>
+                        <span className="absolute inset-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-violet-600 text-white text-center font-semibold text-sm">
+                            {props?.count}
+                        </span>
+                    </>
+                }
+
+            </div>
 
         </>
     );
