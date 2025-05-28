@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { CloseSquareIcon, DangerIcon, EmailIcon, ShowIcon, HideIcon, LockIcon } from "./Icon"
+import { CloseSquareIcon, DangerIcon, EmailIcon, ShowIcon, HideIcon, LockIcon, SearchIcon } from "./Icon"
 
 // Functions
 
@@ -69,7 +69,6 @@ const comparePassword = (event, button_id) => {
         }
     }
 };
-
 export const InputEmail = ({ className, ...props }) => {
     // hooks
     const { t } = useTranslation();
@@ -151,6 +150,49 @@ export const InputEmail = ({ className, ...props }) => {
                 </div>
 
                 {/* input validate */}
+            </div>
+        </>
+    );
+};
+export const InputSearch = ({ className, ...props }) => {
+    // hooks
+    const { t } = useTranslation();
+    return (
+        <>
+            <label
+                htmlFor={props?.id}
+                className="text-xs font-medium text-gray-500 px-1 pb-2"
+            >
+                {props?.label}
+            </label>
+
+            <div className="relative mt-1">
+
+                <input
+                    {...props}
+                    pattern="[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,}(:[0-9]{1,5})?"
+                    type="email"
+                    placeholder={props?.placeholder}
+                    className={cn(
+                        "autofill-input-dark peer placeholder:text-gray-400 placeholder:text-sm w-full pl-2 pr-[2.7rem] py-2 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-0 focus:border-violet-400  justify-between items-center relative",
+                        className
+                    )}
+
+                />
+                <div
+                    id="close_email"
+                    className="absolute inset-y-0 rtl:left-0 ltr:right-0 pl-3 flex items-center"
+                >
+                    {props?.disabled !== "disabled" && (
+                        <div className="absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center">
+                            <div className="p-2">
+                                <div className="flex px-1">
+                                    <SearchIcon width={"20"} height={"20"} color={`${props?.theme == "light" ? "#797882" : "white"}`} />
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
         </>
     );

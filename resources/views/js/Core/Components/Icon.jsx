@@ -309,6 +309,17 @@ export const ProfileIcon = ({ ...props }) => {
         </>
     );
 };
+export const SearchIcon = ({ ...props }) => {
+    return (
+        <>
+            <svg width={props?.width} height={props?.height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" stroke={props?.color}></path>
+                <path d="M21 21l-6 -6" stroke={props?.color}></path>
+            </svg>
+        </>
+    );
+};
 export const WishIcon = ({ ...props }) => {
     return (
         <>
