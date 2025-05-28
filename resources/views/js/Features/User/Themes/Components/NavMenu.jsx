@@ -3,12 +3,20 @@ import React from 'react'
 // Components
 
 import { Button } from "../../../../Core/Components/Button";
+import { MenuIcon } from '../../../../Core/Components/Icon';
 
 const NavMenu = ({ ...props }) => {
     return (
         <>
             <div className="flex items-center">
-                <Button className={"w-32 h-11 text-sm font-medium rounded-md"} >All Categories</Button>
+                <Button className={"px-4 h-11 text-sm font-medium rounded-md hover:bg-violet-600"} >
+                    <div className='flex flex-row items-center gap-2'>
+                        <MenuIcon width="18" height="18" color="#fff" />
+                        <div>
+                            All categories
+                        </div>
+                    </div>
+                </Button>
                 <div className="hidden md:flex space-x-1 ml-10">
                     {props?.menuItems.map((item) => (
                         <div key={item.name} className="group relative">
@@ -51,7 +59,7 @@ const NavMenu = ({ ...props }) => {
                                             ))}
                                         </div>
                                         <div className='inline-flex items-end justify-center p-2'>
-                                            <img alt={item?.name} src={item?.picture} className='w-80 h-60 rounded-sm' />
+                                            <img loading='lazy' alt={item?.name} src={item?.picture} className='w-80 h-60 rounded-sm' />
                                         </div>
                                     </div>
                                 </div>
