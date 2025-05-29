@@ -75,6 +75,69 @@ const Theme = ({ children }) => {
             subItems: []
         },
     ];
+
+    const categories = [
+        {
+            id: 1,
+            name: "electronics",
+            subCategories: [
+                {
+                    id: 101,
+                    name: "mobile-phones",
+                    brands: [
+                        { name: "samsung" },
+                        { name: "apple" },
+                        { name: "xiaomi" }
+                    ]
+                },
+                {
+                    id: 102,
+                    name: "laptops",
+                    brands: [
+                        { name: "asus" },
+                        { name: "lenovo" },
+                        { name: "apple" }
+                    ]
+                }
+            ]
+        },
+        {
+            id: 2,
+            name: "fashion",
+            subCategories: [
+                {
+                    id: 201,
+                    name: "men-clothing",
+                    types: [
+                        { name: "shirts" },
+                        { name: "pants" }
+                    ]
+                },
+                {
+                    id: 202,
+                    name: "women-clothing",
+                    types: [
+                        { name: "dresses" },
+                        { name: "blouses" }
+                    ]
+                }
+            ]
+        },
+        {
+            id: 3,
+            name: "home-appliances",
+            subCategories: [
+                {
+                    id: 301,
+                    name: "refrigerators"
+                },
+                {
+                    id: 302,
+                    name: "washing-machines"
+                }
+            ]
+        }
+    ];
     return (
         <main>
 
@@ -107,7 +170,7 @@ const Theme = ({ children }) => {
                 </div>
                 <div className="w-full py-2 select-none border-b border-gray-100 inline-flex items-center bg-white shadow-sm relative justify-between">
                     <div className="flex flex-row h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
-                        <NavMenu menuItems={menuItems} />
+                        <NavMenu menuItems={menuItems} categories={categories} />
                     </div>
                 </div>
 
