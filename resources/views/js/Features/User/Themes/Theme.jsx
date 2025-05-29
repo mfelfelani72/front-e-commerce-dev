@@ -3,8 +3,15 @@
 import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../Core/Components/Icon"
 import { InputSearch } from "../../../Core/Components/Input";
 import NavMenu from "./Components/NavMenu";
+import { Button } from "../../../Core/Components/Button";
 
-// Image
+// Functions
+
+import IsLogin from "../../Auth/Modules/Utils/Libs/IsLogin"
+import navigate from "../../../Utils/Libs/navigate"
+
+// Images
+
 import image from "../../../../../../public/assets/image/register_cover.jpg"
 
 const Theme = ({ children }) => {
@@ -108,7 +115,7 @@ const Theme = ({ children }) => {
                 {
                     id: 201,
                     name: "men-clothing",
-                    types: [
+                    brands: [
                         { name: "shirts" },
                         { name: "pants" }
                     ]
@@ -116,7 +123,7 @@ const Theme = ({ children }) => {
                 {
                     id: 202,
                     name: "women-clothing",
-                    types: [
+                    brands: [
                         { name: "dresses" },
                         { name: "blouses" }
                     ]
@@ -146,20 +153,28 @@ const Theme = ({ children }) => {
                 <div className="bg-violet-100 py-2 w-full select-none">
                     <div className="flex flex-row items-center justify-between mx-auto w-[calc(100%-30.5rem)] text-gray-500 font-medium text-sm">
                         <div>Super Value Deals - Save more with coupons</div>
-                        <div>English</div>
+                        <div className="flex flex-row gap-2">
+                            {IsLogin() && <div>{"Hi " + sessionStorage.getItem("username")}</div>}
+
+                            <div>English</div>
+                        </div>
                     </div>
                 </div>
                 {/* menu */}
-                <div className="bg-gray-50/80 w-full pb-1 select-none border-b border-gray-100 inline-flex items-center">
+                <div className="bg-gray-50/80 w-full pb-1 select-none border-b border-gray-100 flex flex-row items-center">
                     <div className="flex flex-row py-1 h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
                         <div className="flex flex-row gap-2 items-center">
                             <div className="pt-2">
                                 <Logo width="26" height="26" />
                             </div>
-                            <h1 className="font-bold text-2xl pb-2 capitalize text-violet-900 pt-2">
+                            <h1 className="font-bold text-2xl pb-2 capitalize text-violet-900 pt-2 inline-flex w-full">
                                 e-commerce
                             </h1>
-                            <InputSearch className={"w-[30rem]"} placeholder="Search in product" theme="light" />
+                            <div className="inline-flex items-center w-full gap-2">
+                                <InputSearch className={"w-[32rem]"} placeholder="Search in product" theme="light" />
+                                {!IsLogin() && <Button onClick={() => { navigate("/auth/login", true) }} className={"px-4 w-20 h-10 text-sm font-medium rounded-md hover:bg-violet-600"} >sign in</Button>}
+
+                            </div>
                         </div>
                         <div className="flex flex-row pt-2.5 items-center gap-6">
                             <WishIcon width="24" height="24" color="#4a5565" count={1} />
