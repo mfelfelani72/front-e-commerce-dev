@@ -3,7 +3,7 @@ import React from 'react'
 // Components
 
 import { Button } from "../../../../Core/Components/Button";
-import { MenuIcon } from '../../../../Core/Components/Icon';
+import { ArrowMenuIcon, MenuIcon } from '../../../../Core/Components/Icon';
 
 const NavMenu = ({ ...props }) => {
     return (
@@ -27,8 +27,9 @@ const NavMenu = ({ ...props }) => {
                                 {item.name}
                                 {item.subItems.length > 0 && (
                                     // icon
-                                    <div
-                                        className="ml-1 h-4 w-4 text-gray-500 group-hover:text-violet-600 transition-transform duration-200 group-hover:rotate-180"
+                                    <ArrowMenuIcon
+                                        width="16" height="16" color="#000"
+                                        className="mx-1 mt-0.5 h-4 w-4 text-gray-500 group-hover:text-violet-600 transition-transform duration-200 group-hover:rotate-180"
                                     />
                                 )}
                             </a>
@@ -40,7 +41,7 @@ const NavMenu = ({ ...props }) => {
                                         <div className="w-full rounded-b-lg p-6 grid grid-cols-3 gap-6 mt-0 animate-slideUp">
                                             {item.subItems.map((category, idx) => (
                                                 <div key={idx} className="space-y-2">
-                                                    <h3 className="text-lg font-semibold text-gray-900 border-b border-violet-800 pb-2 mb-2">
+                                                    <h3 className="text-md font-semibold text-gray-900 border-b border-violet-800 pb-2 mb-2">
                                                         {category.name}
                                                     </h3>
                                                     <ul className="space-y-2">
@@ -48,7 +49,7 @@ const NavMenu = ({ ...props }) => {
                                                             <li key={subItem.name}>
                                                                 <a
                                                                     href={subItem.href}
-                                                                    className="text-gray-700 hover:text-violet-600 block px-2 py-1 text-sm transition-colors duration-150"
+                                                                    className="text-gray-700 hover:text-violet-600 block py-1 text-sm transition-colors duration-150"
                                                                 >
                                                                     {subItem.name}
                                                                 </a>

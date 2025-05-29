@@ -1,4 +1,6 @@
-import React from "react";
+// Functions
+
+import { cn } from "../../Utils/Libs/cn";
 
 export const Logo = ({ className, ...props }) => {
     return (
@@ -330,6 +332,17 @@ export const MenuIcon = ({ ...props }) => {
                 <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" stroke={props?.color}></path>
                 <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" stroke={props?.color}></path>
             </svg>
+        </>
+    );
+};
+export const ArrowMenuIcon = ({ className, ...props }) => {
+    return (
+        <>
+            <div className={cn("", className)}>
+                <svg width={props?.width} height={props?.height} viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M19.7504 8.10683C19.7504 8.23095 19.7174 8.35601 19.6464 8.47058C19.1994 9.19043 15.1914 15.5049 12.0004 15.5049C8.81043 15.5049 4.80143 9.19138 4.35443 8.47058C4.14343 8.13166 4.26143 7.69058 4.61843 7.49009C4.97543 7.28865 5.43543 7.4013 5.64643 7.74118C7.16543 10.1891 10.2334 14.0728 12.0004 14.0728C13.7704 14.0728 16.8374 10.1891 18.3544 7.74118C18.5654 7.4013 19.0254 7.28865 19.3824 7.49009C19.6184 7.62375 19.7504 7.86147 19.7504 8.10683Z" fill={props?.color} />
+                </svg>
+            </div>
         </>
     );
 };
