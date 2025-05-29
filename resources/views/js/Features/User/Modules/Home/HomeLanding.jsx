@@ -2,6 +2,10 @@
 import { Head } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 
+// Containers
+
+import LatestBlogs from "./Containers/LatestBlogs";
+
 const Home = ({ ...props }) => {
     // hooks
     const { t } = useTranslation();
@@ -25,8 +29,10 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div className="h-full w-full">
-                sdfdsfds
+            <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-30.5rem)]">
+                {/* Latest blogs */}
+                <LatestBlogs />
+                <LatestBlogs />
             </div>
         </>
     );

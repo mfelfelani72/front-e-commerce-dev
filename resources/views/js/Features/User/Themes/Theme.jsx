@@ -10,7 +10,7 @@ const Theme = ({ children }) => {
 
             <Header />
 
-            <article className="mt-[10rem]">{children}</article>
+            <article className="mt-[11rem]">{children}</article>
 
             <Footer />
         </main>
