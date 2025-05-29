@@ -25,6 +25,9 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
+            <div className="h-full w-full">
+                sdfdsfds
+            </div>
         </>
     );
 };
