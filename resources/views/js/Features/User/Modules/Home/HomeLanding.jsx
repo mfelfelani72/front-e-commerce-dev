@@ -32,7 +32,6 @@ const Home = ({ ...props }) => {
             <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-30.5rem)]">
                 {/* Latest blogs */}
                 <LatestBlogs />
-                <LatestBlogs />
             </div>
         </>
     );
