@@ -1,4 +1,8 @@
+// Components
+
 import { BlogIcon } from "../../../../../Core/Components/Icon"
+import PostBox from "../../Post/Components/PostBox"
+
 
 
 const LatestBlogs = () => {
@@ -14,11 +18,11 @@ const LatestBlogs = () => {
                     </div>
 
                 </div>
-                <div className="grid grid-cols-4 gap-2">
-                    <div className="bg-rose-500 h-24">dfds</div>
-                    <div className="bg-rose-500 h-24">dfds</div>
-                    <div className="bg-rose-500 h-24">dfds</div>
-                    <div className="bg-rose-500 h-24">dfds</div>
+                <div className="grid grid-cols-4 gap-6">
+                    <PostBox />
+                    <PostBox />
+                    <PostBox />
+                    <PostBox />
                 </div>
             </div>
         </>
