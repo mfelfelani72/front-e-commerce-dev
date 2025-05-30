@@ -21,6 +21,9 @@ const PostBox = ({ className, ...props }) => {
                         "object-cover w-full h-full transition-transform duration-600 ease-in-out hover:rotate-1 hover:scale-105"
                     }
                 />
+                <div className='absolute -translate-y-full group-hover:translate-y-0 top-0 inset-x-0 w-full bg-violet-100/90 py-1 px-2 rounded-none transition-transform duration-600 ease-in-out'>
+                <div className='text-gray-900 text-xs'>2015/06/21 - 19:43</div>
+                </div>
             </div>
 
 
