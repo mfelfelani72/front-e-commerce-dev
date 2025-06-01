@@ -41,8 +41,7 @@ const PostBox = ({ className, ...props }) => {
                     <h3
                         onClick={() =>
                             navigate("/posts/view-post", "get", {
-                                id: "23",
-                                title: "this is a title",
+                                id: "23"
                             })
                         }
                         className="font-medium hover:text-violet-600"

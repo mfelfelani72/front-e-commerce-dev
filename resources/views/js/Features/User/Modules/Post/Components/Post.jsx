@@ -21,7 +21,7 @@ const Post = ({...props}) => {
             </Head>
 
             <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-30.5rem)]">
-                {props?.post?.title}
+                {props?.post?.id}
             </div>
         </>
     );
