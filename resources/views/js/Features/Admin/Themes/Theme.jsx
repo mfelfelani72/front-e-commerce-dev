@@ -1,18 +1,35 @@
 import { Link, router } from "@inertiajs/react";
 
+// Layouts
+
+import ThemeMoblie from "./Layouts/Mobile/Theme.jsx"
+import ThemeIpad from "./Layouts/Ipad/Theme.jsx"
+import ThemeDesktop from "./Layouts/Desktop/Theme.jsx"
+import ThemeTv from "./Layouts/Tv/Theme.jsx"
+
+// Hooks
+
+import useDevice from "../../../Utils/Hooks/useDevice.js";
+
 const Theme = ({ children }) => {
+    // hooks
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop,
+        isTv,
+    } = useDevice();
+
     return (
-        <main>
-            <header className="flex flex-row justify-center h-20 items-center px-24 text-amber-50 bg-cyan-300">
-                {/* <Link preserveScroll href="/login">Home</Link> */}
-                <div className="cursor-pointer" onClick={() => router.get('/home')}>Create</div>
-                <div className="text-white">header</div>
-            </header>
-            <article>{children}</article>
-            <footer className="fixed w-full bottom-0 flex flex-row justify-center h-20 items-center px-24 text-amber-50 bg-cyan-300">
-                footer
-            </footer>
-        </main>
+        <>
+            {isMobile && <ThemeMoblie children={children} />}
+            {isIpad && <ThemeIpad children={children} />}
+            {isDesktop && <ThemeDesktop children={children} />}
+            {isTv && <ThemeTv children={children} />}
+        </>
     );
 };
 

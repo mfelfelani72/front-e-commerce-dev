@@ -7,7 +7,325 @@
 @source "../**/*.js";
 @source "../**/*.vue";
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* persion */
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight: 100;
+      font-style: normal;
+      src: url('../src/assets/fonts/Yekan_Bakh_Thin.TTF');
+      font-display: swap;
+  } */
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../src/assets/fonts/Yekan_Bakh_Light.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../src/assets/fonts/Yekan_Bakh_Regular.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../src/assets/fonts/Yekan_Bakh_Medium.otf");
+    font-display: swap;
+  }
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight:600;
+      font-style: normal;
+      src: url('../src/assets/fonts/Yekan_Bakh_Semi_Bold.TTF');
+      font-display: swap;
+  } */
+  @font-face {
+    font-family: yekanBakh;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../src/assets/fonts/Yekan_Bakh_Bold.otf");
+    font-display: swap;
+  }
+
+  /* @font-face {
+      font-family: yekanBakh;
+      font-weight: 800;
+      font-style: normal;
+      src: url('../src/assets/fonts/Yekan_Bakh_Extra_Bold.TTF');
+      font-display: swap;
+  } */
+
+  /* english */
+
+  /* SpaceGrotesk */
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../src/assets/fonts/SpaceGrotesk-Light.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../src/assets/fonts/SpaceGrotesk-Regular.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../src/assets/fonts/SpaceGrotesk-Medium.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 600;
+    font-style: normal;
+    src: url("../src/assets/fonts/SpaceGrotesk-SemiBold.ttf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: spaceGrotesk;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../src/assets/fonts/SpaceGrotesk-Bold.ttf");
+    font-display: swap;
+  }
+
+  /* Satoshi */
+  @font-face {
+    font-family: satoshi;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../src/assets/fonts/Satoshi-Light.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: satoshi;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../src/assets/fonts/Satoshi-Regular.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: satoshi;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../src/assets/fonts/Satoshi-Medium.otf");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: satoshi;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../src/assets/fonts/Satoshi-Bold.otf");
+    font-display: swap;
+  }
 }
+
+@layer utilities {
+  /* loading  */
+
+  .animate-text-scroll-y {
+    animation: scroll-y 2.5s infinite;
+  }
+  .animate-text-scroll-x {
+    animation: scroll-x 1s infinite;
+  }
+  @keyframes scroll-y {
+    0% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(-102%);
+    }
+    25% {
+      transform: translateY(-100%);
+    }
+    35% {
+      transform: translateY(-202%);
+    }
+    50% {
+      transform: translateY(-200%);
+    }
+    60% {
+      transform: translateY(-302%);
+    }
+    75% {
+      transform: translateY(-300%);
+    }
+    85% {
+      transform: translateY(-402%);
+    }
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(12%);
+    }
+    25% {
+      transform: translateX(10%);
+    }
+    35% {
+      transform: translateX(42%);
+    }
+    50% {
+      transform: translateX(40%);
+    }
+    60% {
+      transform: translateX(72%);
+    }
+    75% {
+      transform: translateX(70%);
+    }
+    85% {
+      transform: translateX(1022%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .right-to-left {
+    direction: rtl;
+  }
+
+  .left-to-right {
+    direction: ltr;
+  }
+}
+
+@theme {
+ /* Fonts */
+
+  --font-yekanBakh: yekanBakh;
+  --font-satoshi: satoshi;
+
+  /* colors */
+
+  /* Primary */
+  --color-Primary-600: rgba(42, 93, 230, 1);
+  --color-Primary-500: rgba(58, 123, 255, 1);
+  --color-Primary-400: rgba(90, 155, 255, 1);
+  --color-Primary-300: rgba(122, 179, 255, 1);
+  --color-Primary-200: rgba(180, 210, 255, 1);
+  --color-Primary-100: rgba(220, 235, 255, 1);
+
+  /* Success */
+  --color-Success-600: rgba(56, 142, 60, 1);
+  --color-Success-500: rgba(76, 175, 80, 1);
+  --color-Success-400: rgba(102, 187, 106, 1);
+  --color-Success-300: rgba(129, 199, 132, 1);
+  --color-Success-200: rgba(65, 214, 167, 1);
+  --color-Success-100: rgba(200, 230, 201, 1);
+
+  /* Error */
+  --color-Error-600: rgba(229, 57, 53, 1);
+  --color-Error-500: rgba(244, 67, 54, 1);
+  --color-Error-400: rgba(239, 83, 80, 1);
+  --color-Error-300: rgba(229, 115, 115, 1);
+  --color-Error-200: rgba(239, 154, 154, 1);
+  --color-Error-100: rgba(255, 205, 210, 1);
+
+  /* Warning */
+  --color-Warning-600: rgba(230, 145, 0, 1);
+  --color-Warning-500: rgba(255, 152, 0, 1);
+  --color-Warning-400: rgba(255, 167, 38, 1);
+  --color-Warning-300: rgba(255, 183, 77, 1);
+  --color-Warning-200: rgba(255, 204, 128, 1);
+  --color-Warning-100: rgba(255, 224, 178, 1);
+
+  /* Neutral */
+  --color-Neutral-600: rgba(10, 10, 15, 1);
+  --color-Neutral-500: rgba(31, 30, 46, 1);
+  --color-Neutral-400: rgba(76, 75, 88, 1);
+  --color-Neutral-300: rgba(121, 120, 130, 1);
+  --color-Neutral-200: rgba(165, 165, 171, 1);
+  --color-Neutral-100: rgba(210, 210, 213, 1);
+  --color-Neutral-50: rgba(242, 242, 243, 1);
+
+  /* HoverFocus */
+  --color-HoverFocus-dark-600: rgba(255, 255, 255, 0.1);
+  --color-HoverFocus-dark-500: rgba(255, 255, 255, 0.09);
+  --color-HoverFocus-dark-400: rgba(255, 255, 255, 0.08);
+  --color-HoverFocus-dark-300: rgba(255, 255, 255, 0.07);
+  --color-HoverFocus-dark-200: rgba(255, 255, 255, 0.06);
+  --color-HoverFocus-dark-100: rgba(255, 255, 255, 0.05);
+
+  --color-HoverFocus-light-600: rgba(0, 0, 0, 0.1);
+  --color-HoverFocus-light-500: rgba(0, 0, 0, 0.09);
+  --color-HoverFocus-light-400: rgba(0, 0, 0, 0.08);
+  --color-HoverFocus-light-300: rgba(0, 0, 0, 0.07);
+  --color-HoverFocus-light-200: rgba(0, 0, 0, 0.06);
+  --color-HoverFocus-light-100: rgba(0, 0, 0, 0.05);
+
+  /* Disable */
+  --color-Disable-dark: rgba(255, 255, 255, 0.3);
+
+  --color-Disable-light: rgba(0, 0, 0, 0.26);
+
+  /* Shadows */
+  --color-Shadows-dark-200: rgba(0, 0, 0, 0.6);
+  --color-Shadows-dark-100: rgba(0, 0, 0, 0.4);
+
+  --color-Shadows-light-200: rgba(0, 0, 0, 0.2);
+  --color-Shadows-light-100: rgba(0, 0, 0, 0.1);
+
+  /* Icon */
+
+  --color-Icon-dark: rgba(255, 255, 255, 0.7);
+  --color-Icon-light: rgba(0, 0, 0, 0.7);
+
+  /* theme */
+
+  --color-blue-theme: rgba(58, 123, 255, 1);
+  --color-orange-theme: rgba(255, 152, 0, 1);
+  --color-purple-theme: rgba(156, 39, 176, 1);
+  --color-green-theme: rgba(76, 175, 80, 1);
+  --color-red-theme: rgba(244, 67, 54, 1);
+  --color-yellow-theme: rgba(255, 235, 59, 1);
+  --color-turquoise-theme: rgba(0, 188, 212, 1);
+
+  --color-Background-dark: rgba(25, 30, 40, 1);
+  --color-BackgroundSecondary-dark: rgba(35, 42, 55, 1);
+  --color-BackgroundSection-dark: rgba(45, 54, 70, 1);
+  --color-Text-dark: rgba(230, 235, 240, 1);
+  --color-TextSecondary-dark: rgba(170, 180, 190, 1);
+  --color-Text-Disable-dark: rgba(100, 110, 120, 1);
+  --color-Line-dark: rgba(55, 65, 80, 1);
+
+  --color-Background-light: rgba(245, 248, 250, 1);
+  --color-BackgroundSecondary-light: rgba(235, 240, 245, 1);
+  --color-BackgroundSection-light: rgba(225, 232, 240, 1);
+  --color-Text-light: rgba(30, 40, 50, 1);
+  --color-TextSecondary-light: rgba(70, 85, 100, 1);
+  --color-Text-Disable-light: rgba(140, 150, 160, 1);
+  --color-Line-light: rgba(210, 220, 230, 1);
+}
+

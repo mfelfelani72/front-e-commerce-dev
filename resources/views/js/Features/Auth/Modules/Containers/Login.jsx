@@ -1,3 +1,4 @@
+import { Head } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -10,7 +11,6 @@ import LoginTv from "../Layouts/Tv/Login";
 // Hooks
 
 import useDevice from '../../../../Utils/Hooks/useDevice';
-import { Head } from "@inertiajs/react";
 
 const Login = () => {
   // hooks
