@@ -29,7 +29,7 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-30.5rem)]">
+            <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-10.5rem)]">
                 {/* Latest blogs */}
                 <LatestBlogs />
             </div>

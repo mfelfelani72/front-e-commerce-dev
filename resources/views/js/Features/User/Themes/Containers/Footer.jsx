@@ -7,7 +7,7 @@ const Footer = () => {
         <>
             <footer className="border-t border-gray-300 w-full">
                 <div className="bg-violet-200">
-                    <div className="container mx-auto py-20 px-4 w-[calc(100%-30.5rem)]">
+                    <div className="container mx-auto py-20 px-4 w-[calc(100%-10.5rem)]">
                         <div className="flex flex-wrap -mx-4">
                             {/* Company Info */}
                             <div className="w-full lg:w-1/4 px-4 mb-8 lg:mb-0 inline-flex flex-col justify-center">

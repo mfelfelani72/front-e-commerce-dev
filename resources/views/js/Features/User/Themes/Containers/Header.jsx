@@ -147,10 +147,10 @@ const Header = () => {
     ];
     return (
         <>
-            <header className="fixed top-0 w-full">
+            <header className="fixed top-0 w-full z-[900]">
                 {/* violet banner */}
                 <div className="bg-violet-100 py-2 w-full select-none">
-                    <div className="flex flex-row items-center justify-between mx-auto w-[calc(100%-30.5rem)] text-gray-500 font-medium text-sm">
+                    <div className="flex flex-row items-center justify-between mx-auto w-[calc(100%-10rem)] text-gray-500 font-medium text-sm">
                         <div>Super Value Deals - Save more with coupons</div>
                         <div className="flex flex-row gap-2">
                             {IsLogin() && <div>{"Hi " + sessionStorage.getItem("username")}</div>}
@@ -161,7 +161,7 @@ const Header = () => {
                 </div>
                 {/* menu */}
                 <div className="bg-gray-50 w-full pb-1 select-none border-b border-gray-100 flex flex-row items-center">
-                    <div className="flex flex-row py-1 h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
+                    <div className="flex flex-row py-1 h-full items-center justify-between mx-auto w-[calc(100%-10rem)]" >
                         <div className="flex flex-row gap-2 items-center">
                             <div className="pt-2">
                                 <Logo width="26" height="26" />
@@ -183,7 +183,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="w-full py-2 select-none border-b border-gray-100 inline-flex items-center bg-white shadow-sm relative justify-between">
-                    <div className="flex flex-row h-full items-center justify-between mx-auto w-[calc(100%-30.5rem)]" >
+                    <div className="flex flex-row h-full items-center justify-between mx-auto w-[calc(100%-10rem)]" >
                         <NavMenu menuItems={menuItems} categories={categories} />
                     </div>
                 </div>

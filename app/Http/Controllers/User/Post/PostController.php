@@ -12,7 +12,7 @@ class PostController extends Controller
     {
         $params = $request->all();
 
-        return Inertia::render('Post/Components/Post', [
+        return Inertia::render('Post/Containers/Post', [
             'post' => $params,
             'message' => "mohammad - post"
         ]);
