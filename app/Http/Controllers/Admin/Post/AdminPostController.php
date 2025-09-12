@@ -11,9 +11,15 @@ class AdminPostController extends Controller
 {
     public function listPost()
     {
-        
-
         return Inertia::render('posts/containers/PostLists', [
+            'post' => 1,
+            'message' => "mohammad - post"
+        ]);
+    }
+
+    public function createPost()
+    {
+         return Inertia::render('posts/containers/CreatePost', [
             'post' => 1,
             'message' => "mohammad - post"
         ]);

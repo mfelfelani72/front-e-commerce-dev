@@ -52,7 +52,7 @@ const PostLists = () => {
           id={"mohammad"}
           data={data}
           links={{
-            create:"/create-post"
+            create:"/admin/posts/create-post"
           }}
           customColumnConfig={{
             id: { title: "id", sortable: false, baseWidth: 50 },

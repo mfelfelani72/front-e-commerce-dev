@@ -205,7 +205,7 @@ const Table = ({
             </ButtonNoLink>
             <ButtonNoLink
               onClick={() => {
-                navigate(props?.links?.create);
+                navigate(props?.links?.create,"get");
               }}
               className={
                 "h-8 rounded-md bg-Success-500 dark:bg-Success-500 hover:bg-Success-600"

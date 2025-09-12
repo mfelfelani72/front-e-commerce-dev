@@ -12,6 +12,7 @@ Route::resource('/admin', HomeController::class);
 Route::controller(AdminPostController::class)->group(function () {
    
     Route::get('/admin/posts/list-post', 'listPost');
+    Route::get('/admin/posts/create-post', 'CreatePost');
 });
 
 // user
