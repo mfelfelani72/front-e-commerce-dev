@@ -8,7 +8,7 @@ import {
   HomeIcon,
   ListIcon,
   PostsIcon,
-} from "../../../../Components/Icon.jsx";
+} from "../../../../../../Core/Components/Icon.jsx";
 
 // Functions
 
@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className="flex flex-col py-4">
           <DropListBox
             id={"home"}
-            to="/home"
+            to="/admin"
             icon={<HomeIcon className={`text-${themeColor} dark:text-${themeColor}`}/>}
             title={"home"}
           />
@@ -53,7 +53,7 @@ const Sidebar = () => {
               {
                 name: "posts_list",
                 icon: <ListIcon className={`w-5 h-5 text-${themeColor} dark:text-${themeColor}`} />,
-                link: "/posts",
+                link: "/admin/posts/list-post",
               },
             ]}
           />

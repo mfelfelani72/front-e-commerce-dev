@@ -1,14 +1,12 @@
 import { router } from "@inertiajs/react";
 
 const navigate = (to, options = {}, data = {}) => {
-    // سازگاری با ورودیهای قدیمی (reload به عنوان پارامتر دوم)
     if (typeof options === "boolean") {
         if (options) window.location.href = to;
         else router.visit(to);
         return;
     }
 
-    // پردازش ورودیهای جدید
     const { method = "get", reload = false } = options;
 
     if (reload) {

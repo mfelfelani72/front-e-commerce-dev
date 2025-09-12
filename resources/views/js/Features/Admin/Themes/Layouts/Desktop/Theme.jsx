@@ -11,7 +11,7 @@ const Theme = ({ className, children, ...props }) => {
             <Sidebar />
             <div className="w-[calc(100vw-16rem)] ltr:ml-[16rem] rtl:mr-[16rem]">
                 <Header />
-                <div className="pt-[4.5rem] h-screen bg-BackgroundSection-light dark:bg-BackgroundSection-dark min-h-[calc(100vh-4.5rem)] p-5">
+                <div className="pt-[6.5rem] h-screen bg-BackgroundSection-light dark:bg-BackgroundSection-dark min-h-[calc(100vh-4.5rem)] p-5">
                     {children}
                 </div>
             </div>

@@ -14,7 +14,7 @@ import {
   SearchIcon,
   ShowIcon,
   MoonIcon,
-} from "./Icon.jsx";
+} from "../../../Core/Components/Icon.jsx";
 
 // Functions
 

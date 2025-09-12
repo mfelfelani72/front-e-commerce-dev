@@ -8,7 +8,7 @@ import {
   BellIcon,
   LanguageIcon,
   UserSettingIcon,
-} from "../../../../Components/Icon";
+} from "../../../../../../Core/Components/Icon.jsx";
 import Languages from "../Components/Languages.jsx";
 import GhostBox from "../../../../Components/GhostBox/GhostBox.jsx";
 import UserSetting from "./UserSetting.jsx";
@@ -29,7 +29,7 @@ const Header = () => {
   const themeColor = useAppStore((state) => state.themeColor);
   return (
     <>
-      <div className="fixed w-[calc(100vw-16rem)] bg-Background-light dark:bg-Background-dark py-4 px-8 flex flex-row justify-between items-center border-b border-Line-light dark:border-Line-dark">
+      <div className="fixed w-[calc(100vw-16rem)] z-[900] bg-Background-light dark:bg-Background-dark py-4 px-8 flex flex-row justify-between items-center border-b border-Line-light dark:border-Line-dark">
         {/* search */}
         <div className="w-96">
           <InputSearch placeholder={t("search")} />

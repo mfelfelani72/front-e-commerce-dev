@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { AngleIcon } from "./Icon.jsx";
+import { AngleIcon } from "../../../Core/Components/Icon.jsx";
 
 // Functions
 
@@ -37,7 +37,7 @@ const DropListBox = ({ className, ...props }) => {
   // functions
 
   const handleItemClick = (link) => {
-    navigate(link);
+    navigate(link,"get");
   };
 
   const handleParentClick = () => {
