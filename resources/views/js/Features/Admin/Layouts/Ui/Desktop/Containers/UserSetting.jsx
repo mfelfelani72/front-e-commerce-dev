@@ -9,7 +9,7 @@ import {
   ThemeIcon,
   UserIcon,
 } from "../../../../../../Core/Components/Icon.jsx";
-import { InputDarkLight } from "../../../../Components/Input";
+import { InputDarkLight } from "../../../../Components/Input.jsx";
 
 // Functions
 

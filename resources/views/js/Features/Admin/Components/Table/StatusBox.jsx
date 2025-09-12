@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { cn } from "../../../Utils/Libs/cn";
+import { cn } from "../../../../Utils/Libs/cn";
 import { useEffect } from "react";
 
 const StatusBox = ({ className, status, ...props }) => {

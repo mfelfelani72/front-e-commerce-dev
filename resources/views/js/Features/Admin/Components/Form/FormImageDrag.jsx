@@ -2,15 +2,16 @@ import React from "react";
 
 // Components
 
-import { HomeIcon } from "../Icon.jsx";
+import { HomeIcon } from "../../Components/Icon.jsx";
 
 // Functions
 
-import { cn } from "../../../Utils/Libs/cn.js";
+import { cn } from "../../../../Utils/Libs/cn.js";
 
 // Zustand
 
-import useAppStore from "../../../Stores/AppStore.js";
+import useAppStore from "../../../../Stores/AppStore.js";
+
 import { useTranslation } from "react-i18next";
 
 const FormImageDrag = ({ className, ...props }) => {

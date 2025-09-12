@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Trigger from "./Trigger.jsx";
 import Body from "./Body.jsx";
-import { cn } from "../../../../../utils/libs/cn.js";
+import { cn } from "../../../../Utils/Libs/cn.js";
 
 const GhostBox = ({
   className,

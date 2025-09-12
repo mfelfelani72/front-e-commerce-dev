@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Theme = () => {
+const Layout = () => {
   return (
     <div>Theme mobile</div>
   )
 }
 
-export default Theme
+export default Layout

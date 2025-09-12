@@ -5,7 +5,7 @@ import React from "react";
 import Header from "./Containers/Header";
 import Sidebar from "./Containers/Sidebar";
 
-const Theme = ({ className, children, ...props }) => {
+const Layout = ({ className, children, ...props }) => {
     return (
         <>
             <Sidebar />
@@ -19,4 +19,4 @@ const Theme = ({ className, children, ...props }) => {
     );
 };
 
-export default Theme;
+export default Layout;

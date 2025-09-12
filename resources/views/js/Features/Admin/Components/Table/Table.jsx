@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import navigate from "../../../Utils/Libs/navigate.js"
 
 // Components
 
@@ -10,11 +9,12 @@ import { ButtonNoLink } from "../Button.jsx";
 
 // Functions
 
-import { cn } from "../../../Utils/Libs/cn.js";
+import { cn } from "../../../../Utils/Libs/cn.js";
+import navigate from "../../../../Utils/Libs/navigate.js"
 
 // Zustand
 
-import useAppStore from "../../../Stores/AppStore.js";
+import useAppStore from "../../../../Stores/AppStore.js";
 
 const Table = ({
   data = [],

@@ -2,16 +2,16 @@ import { Link, router } from "@inertiajs/react";
 
 // Layouts
 
-import ThemeMoblie from "./Layouts/Mobile/Theme.jsx"
-import ThemeIpad from "./Layouts/Ipad/Theme.jsx"
-import ThemeDesktop from "./Layouts/Desktop/Theme.jsx"
-import ThemeTv from "./Layouts/Tv/Theme.jsx"
+import ThemeMoblie from "./Ui/Mobile/Layout.jsx"
+import ThemeIpad from "./Ui/Ipad/Layout.jsx"
+import ThemeDesktop from "./Ui/Desktop/Layout.jsx"
+import ThemeTv from "./Ui/Tv/Layout.jsx"
 
 // Hooks
 
 import useDevice from "../../../Utils/Hooks/useDevice.js";
 
-const Theme = ({ children }) => {
+const Layout = ({ children }) => {
     // hooks
     const {
         type,
@@ -33,4 +33,4 @@ const Theme = ({ children }) => {
     );
 };
 
-export default Theme;
+export default Layout;

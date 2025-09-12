@@ -2,7 +2,7 @@ import React from "react";
 
 // Functions
 
-import { cn } from "../../../../../utils/libs/cn";
+import { cn } from "../../Utils/Libs/cn";
 
 const Body = ({ className, children, ...props }) => {
   return (

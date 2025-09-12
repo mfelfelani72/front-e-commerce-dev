@@ -3,7 +3,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import { createRoot } from "react-dom/client";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../views/js/Utils/Services/i18n/index';
-import AdminTheme from "../views/js/Features/Admin/Themes/Theme";
+import AdminTheme from "../views/js/Features/Admin/Layouts/Layout";
 import AuthTheme from "../views/js/Features/Auth/Themes/Theme";
 import UserTheme from "../views/js/Features/User/Themes/Theme";
 

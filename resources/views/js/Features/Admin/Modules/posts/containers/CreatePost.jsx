@@ -1,7 +1,7 @@
 import React from "react";
-import FormInput from "../../../../../Core/Components/Form/FormInput.jsx";
-import FormSelect from "../../../../../Core/Components/Form/FormSelect.jsx";
-import FormImageDrag from "../../../../../Core/Components/Form/FormImageDrag.jsx";
+import FormInput from "../../../Components/Form/FormInput.jsx";
+import FormSelect from "../../../Components/Form/FormSelect.jsx";
+import FormImageDrag from "../../../Components/Form/FormImageDrag.jsx";
 
 
 import { useTranslation } from "react-i18next";

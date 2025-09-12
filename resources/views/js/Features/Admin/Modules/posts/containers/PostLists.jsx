@@ -1,13 +1,10 @@
 import React from "react";
 import {
-  DashboardIcon,
   ViewIcon,
   TrashIcon,
-} from "../../../../../Core/Components/Icon.jsx";
+} from "../../../Components/Icon.jsx";
 
-import Footer from "../components/Footer.jsx";
-import Table from "../../../../../Core/Components/Table/Table.jsx";
-import { create } from "zustand";
+import Table from "../../../Components/Table/Table.jsx";
 
 const PostLists = () => {
   const data = [
