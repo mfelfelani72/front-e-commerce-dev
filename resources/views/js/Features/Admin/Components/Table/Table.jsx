@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { InputCheckBoxButton, InputRadioButton, InputSearch } from "../Input.jsx";
+import { InputCheckBoxButton, InputRadioButton, InputSearch } from "../../../../Components/Input.jsx";
 import StatusBox from "./StatusBox.jsx";
 import { ButtonNoLink } from "../../../../Components/Button.jsx";
 

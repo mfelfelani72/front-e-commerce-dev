@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 
-import { HomeIcon } from "../../Components/Icon.jsx";
+import { HomeIcon } from "../../../../Components/Icon.jsx";
 
 // Functions
 

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { InputSearch } from "../../../../Components/Input.jsx";
+import { InputSearch } from "../../../../../../Components/Input.jsx";
 import {
   BellIcon,
   LanguageIcon,
