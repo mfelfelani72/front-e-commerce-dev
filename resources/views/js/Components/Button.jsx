@@ -7,11 +7,11 @@ import { GoogleLogo } from "../Features/User/Components/Icon";
 
 // Functions
 
-import { cn } from "../../Utils/Libs/cn";
+import { cn } from "../Utils/Libs/cn";
 
 // Zustand
 
-import useAppStore from "../../Stores/AppStore";
+import useAppStore from "../Stores/AppStore";
 
 export const Button = ({ children, className, ...props }) => {
     return (

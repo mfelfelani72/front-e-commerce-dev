@@ -5,7 +5,7 @@ import i18n from "../../../../../../Utils/Services/i18n/index";
 // Components
 
 import { InputRadioButton } from "../../../../Components/Input";
-import { IranIcon, USIcon } from "../../../../../../Core/Components/Icon";
+import { IranIcon, USIcon } from "../../../../../../Components/Icon";
 
 // Zustand
 

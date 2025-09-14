@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { InputCheckBoxButton, InputRadioButton, InputSearch } from "../Input.jsx";
 import StatusBox from "./StatusBox.jsx";
-import { ButtonNoLink } from "../Button.jsx";
+import { ButtonNoLink } from "../../../../Components/Button.jsx";
 
 // Functions
 

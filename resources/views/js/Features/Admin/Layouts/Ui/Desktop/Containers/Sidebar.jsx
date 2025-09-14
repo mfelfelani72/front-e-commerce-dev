@@ -8,7 +8,7 @@ import {
   HomeIcon,
   ListIcon,
   PostsIcon,
-} from "../../../../../../Core/Components/Icon.jsx";
+} from "../../../../../../Components/Icon.jsx";
 
 // Functions
 

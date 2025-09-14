@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 // Components
 
-import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../Core/Components/Icon.jsx"
-import { GoogleButton, SubmitButton, TextButton } from '../../../../../Core/Components/Button.jsx';
-import { InputEmail, InputPassword, InputRePassword } from '../../../../../Core/Components/Input.jsx';
-import LoaderDotSpinner from '../../../../../Core/Components/LoaderDotSpinner.jsx';
+import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../Components/Icon.jsx"
+import { GoogleButton, SubmitButton, TextButton } from '../../../../../Components/Button.jsx';
+import { InputEmail, InputPassword, InputRePassword } from '../../../../../Components/Input.jsx';
+import LoaderDotSpinner from '../../../../../Components/LoaderDotSpinner.jsx';
 
 // Functions
 

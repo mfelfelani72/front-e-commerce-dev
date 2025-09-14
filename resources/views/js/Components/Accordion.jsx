@@ -6,7 +6,7 @@ import { ArrowMenuIcon } from "../Features/User/Components/Icon.jsx";
 
 // Functions
 
-import { cn } from "../../Utils/Libs/cn.js";
+import { cn } from "../Utils/Libs/cn.js";
 
 const Accordion = ({ parentClassName, className, children, ...props }) => {
     // states

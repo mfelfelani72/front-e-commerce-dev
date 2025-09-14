@@ -8,7 +8,7 @@ import {
   SettingIcon,
   ThemeIcon,
   UserIcon,
-} from "../../../../../../Core/Components/Icon.jsx";
+} from "../../../../../../Components/Icon.jsx";
 import { InputDarkLight } from "../../../../Components/Input.jsx";
 
 // Functions

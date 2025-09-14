@@ -1,6 +1,6 @@
 // Components
 
-import { BlogIcon } from "../../../../../Core/Components/Icon"
+import { BlogIcon } from "../../../Components/Icon"
 import PostBox from "../../Post/Components/PostBox"
 
 

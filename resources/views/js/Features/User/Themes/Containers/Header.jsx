@@ -1,9 +1,9 @@
 // Componets
 
-import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../../Core/Components/Icon"
-import { InputSearch } from "../../../../Core/Components/Input";
+import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../../Components/Icon"
+import { InputSearch } from "../../../../Components/Input";
 import NavMenu from "./../Components/NavMenu";
-import { Button } from "../../../../Core/Components/Button";
+import { Button } from "../../../../Components/Button";
 
 // Functions
 

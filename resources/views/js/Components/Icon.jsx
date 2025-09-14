@@ -1,6 +1,6 @@
 // Functions
 
-import { cn } from "../../../Utils/Libs/cn";
+import { cn } from "../Utils/Libs/cn";
 
 export const Logo = ({ className, ...props }) => {
     return (

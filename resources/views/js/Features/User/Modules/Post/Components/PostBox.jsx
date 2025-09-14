@@ -1,6 +1,6 @@
 // Components
 
-import { ClockIcon } from "../../../../../Core/Components/Icon";
+import { ClockIcon } from "../../../Components/Icon";
 
 // Functions
 

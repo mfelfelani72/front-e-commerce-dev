@@ -8,9 +8,9 @@ import {
   BellIcon,
   LanguageIcon,
   UserSettingIcon,
-} from "../../../../../../Core/Components/Icon.jsx";
+} from "../../../../../../Components/Icon.jsx";
 import Languages from "../Components/Languages.jsx";
-import GhostBox from "../../../../Components/GhostBox/GhostBox.jsx";
+import GhostBox from "../../../../../../Components/GhostBox/GhostBox.jsx";
 import UserSetting from "./UserSetting.jsx";
 
 // Functions

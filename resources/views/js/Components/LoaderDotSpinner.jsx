@@ -3,11 +3,11 @@ import React from "react";
 
 // Functions
 
-import { cn } from "../../Utils/Libs/cn";
+import { cn } from "../Utils/Libs/cn";
 
 // Svg
 
-import loader from "../../../../../public/assets/svg/icon/12-dots-scale-rotate.svg";
+import loader from "../../../../public/assets/svg/icon/12-dots-scale-rotate.svg";
 
 const LoaderDotSpinner = ({ className, ...props }) => {
   return (

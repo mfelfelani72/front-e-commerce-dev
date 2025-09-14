@@ -2,7 +2,7 @@ import React from "react";
 
 // Functions
 
-import { cn } from "../../../../Utils/Libs/cn";
+import { cn } from "../../Utils/Libs/cn";
 
 const Trigger = ({ className, children, ...props }) => {
   return (

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { AngleIcon } from "../../../Core/Components/Icon.jsx";
+import { AngleIcon } from "../../../Components/Icon.jsx";
 
 // Functions
 
