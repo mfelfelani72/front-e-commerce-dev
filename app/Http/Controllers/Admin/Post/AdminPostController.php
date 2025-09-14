@@ -11,7 +11,7 @@ class AdminPostController extends Controller
 {
     public function listPost()
     {
-        return Inertia::render('posts/containers/PostLists', [
+        return Inertia::render('Posts/Containers/PostsList', [
             'post' => 1,
             'message' => "mohammad - post"
         ]);
@@ -19,7 +19,7 @@ class AdminPostController extends Controller
 
     public function createPost()
     {
-         return Inertia::render('posts/containers/CreatePost', [
+         return Inertia::render('Posts/Containers/CreatePost', [
             'post' => 1,
             'message' => "mohammad - post"
         ]);
