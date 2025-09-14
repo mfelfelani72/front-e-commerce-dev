@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Components
 
-import { ArrowMenuIcon } from "../Features/User/Components/Icon.jsx";
+import { ArrowMenuIcon } from "./Icon.jsx";
 
 // Functions
 

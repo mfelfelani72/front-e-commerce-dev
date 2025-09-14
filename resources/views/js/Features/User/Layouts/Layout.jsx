@@ -1,9 +1,9 @@
 // Containers
 
-import Header from "./Containers/Header";
-import Footer from "./Containers/Footer";
+import Header from "./Desktop/Containers/Header";
+import Footer from "./Desktop/Containers/Footer";
 
-const Theme = ({ children }) => {
+const Layout = ({ children }) => {
 
     return (
         <main>
@@ -17,4 +17,4 @@ const Theme = ({ children }) => {
     );
 };
 
-export default Theme;
+export default Layout;

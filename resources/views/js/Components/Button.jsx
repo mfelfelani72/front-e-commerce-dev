@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { GoogleLogo } from "../Features/User/Components/Icon";
+import { GoogleLogo } from "./Icon";
 
 // Functions
 

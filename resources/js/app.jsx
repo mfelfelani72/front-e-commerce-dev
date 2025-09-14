@@ -5,7 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '../views/js/Utils/Services/i18n/index';
 import AdminTheme from "../views/js/Features/Admin/Layouts/Layout";
 import AuthTheme from "../views/js/Features/Auth/Layouts/Layout";
-import UserTheme from "../views/js/Features/User/Themes/Theme";
+import UserTheme from "../views/js/Features/User/Layouts/Layout";
 
 createInertiaApp({
     resolve: (name) => {

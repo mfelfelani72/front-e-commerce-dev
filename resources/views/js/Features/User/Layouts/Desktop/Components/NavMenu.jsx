@@ -2,8 +2,8 @@ import React from 'react'
 
 // Components
 
-import { Button } from "../../../../Components/Button";
-import { ArrowMenuIcon, MenuIcon } from '../../../../Components/Icon';
+import { Button } from "../../../../../Components/Button";
+import { ArrowMenuIcon, MenuIcon } from '../../../../../Components/Icon';
 
 const NavMenu = ({ ...props }) => {
     return (

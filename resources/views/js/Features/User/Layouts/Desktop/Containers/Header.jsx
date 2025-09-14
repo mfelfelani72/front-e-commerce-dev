@@ -1,18 +1,18 @@
 // Componets
 
-import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../../Components/Icon"
-import { InputSearch } from "../../../../Components/Input";
-import NavMenu from "./../Components/NavMenu";
-import { Button } from "../../../../Components/Button";
+import { BasketIcon, Logo, ProfileIcon, WishIcon } from "../../../../../Components/Icon"
+import { InputSearch } from "../../../../../Components/Input";
+import NavMenu from "../Components/NavMenu";
+import { Button } from "../../../../../Components/Button";
 
 // Functions
 
-import IsLogin from "../../../Auth/Utils/Libs/IsLogin"
-import navigate from "../../../../Utils/Libs/navigate"
+import IsLogin from "../../../../Auth/Utils/Libs/IsLogin"
+import navigate from "../../../../../Utils/Libs/navigate"
 
 // Images
 
-import image from "../../../../../../../public/assets/image/register_cover.jpg"
+import image from "../../../../../../../../public/assets/image/register_cover.jpg"
 
 const Header = () => {
     // const

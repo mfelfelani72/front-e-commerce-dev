@@ -1,33 +1,34 @@
-// Components
+// Ui
 
-import { BlogIcon } from "../../../Components/Icon"
-import PostBox from "../../Post/Components/PostBox"
+import LatestBlogsMobile from "../Ui/Mobile/Containers/LatestBlogs.jsx";
+import LatestBlogsIpad from "../Ui/Ipad/Containers/LatestBlogs.jsx";
+import LatestBlogsDesktop from "../Ui/Desktop/Containers/LatestBlogs.jsx";
+import LatestBlogsTv from "../Ui/Tv/Containers/LatestBlogs.jsx";
 
+// Hooks
 
+import useDevice from "../../../../../Utils/Hooks/useDevice.js";
 
-const LatestBlogs = () => {
+const LatestBlogs = ({ children }) => {
+    // hooks
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop,
+        isTv,
+    } = useDevice();
+
     return (
         <>
-            <div className="flex flex-col gap-4 w-full">
-                <div className="flex flex-row items-center justify-between">
-                    <div className="inline-flex items-center gap-2">
-                        <BlogIcon className={"h-6 w-6 text-violet-600"} />
-                        <div className="text-sm font-medium capitalize">
-                            latest <span className="text-violet-600">blog</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div className="grid grid-cols-4 gap-6">
-                    <PostBox />
-                    <PostBox />
-                    <PostBox />
-                    <PostBox />
-                </div>
-            </div>
+            {isMobile && <LatestBlogsMobile children={children} />}
+            {isIpad && <LatestBlogsIpad children={children} />}
+            {isDesktop && <LatestBlogsDesktop children={children} />}
+            {isTv && <LatestBlogsTv children={children} />}
         </>
+    );
+};
 
-    )
-}
-
-export default LatestBlogs
+export default LatestBlogs;

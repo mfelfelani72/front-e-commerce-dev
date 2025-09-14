@@ -1,16 +1,30 @@
+// Ui
+
+import HomeLandingMobile from "./Ui/Mobile/Containers/HomeLanding.jsx";
+import HomeLandingIpad from "./Ui/Ipad/Containers/HomeLanding.jsx";
+import HomeLandingDesktop from "./Ui/Desktop/Containers/HomeLanding.jsx";
+import HomeLandingTv from "./Ui/Tv/Containers/HomeLanding.jsx";
+
+// Hooks
+
+import useDevice from "../../../../Utils/Hooks/useDevice.js";
 import { Head } from "@inertiajs/react";
-import { useTranslation } from "react-i18next";
 
-// Containers
-
-import LatestBlogs from "./Containers/LatestBlogs";
-
-const Home = ({ ...props }) => {
+const Home = ({ children }) => {
     // hooks
-    const { t } = useTranslation();
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop,
+        isTv,
+    } = useDevice();
+
     return (
         <>
-            <Head>
+         <Head>
                 <title>Home</title>
                 <meta charset="utf-8" />
                 <meta
@@ -29,12 +43,13 @@ const Home = ({ ...props }) => {
                     content="text/html; charset=utf-8"
                 />
             </Head>
-            <div className="flex flex-col my-5 gap-4 h-full mx-auto w-[calc(100%-10.5rem)]">
-                {/* Latest blogs */}
-                <LatestBlogs />
-            </div>
+            {isMobile && <HomeLandingMobile children={children} />}
+            {isIpad && <HomeLandingIpad children={children} />}
+            {isDesktop && <HomeLandingDesktop children={children} />}
+            {isTv && <HomeLandingTv children={children} />}
         </>
     );
 };
 
 export default Home;
+

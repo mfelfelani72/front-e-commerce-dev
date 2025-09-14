@@ -3,7 +3,7 @@ import { Head } from "@inertiajs/react";
 // Components
 
 import Accordion from "../../../../../Components/Accordion";
-import { ClockIcon } from "../../../Components/Icon";
+import { ClockIcon } from "../../../../../Components/Icon";
 import ShortPostBox from "../Components/ShortPostBox";
 import CategoryList from "../Components/CategoryList";
 

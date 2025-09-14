@@ -1,6 +1,6 @@
 // Containers
 
-import { Logo } from "../../../../Components/Icon";
+import { Logo } from "../../../../../Components/Icon";
 
 const Footer = () => {
     return (
