@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 // Containers
 
-import LatestBlogs from "../Containers/LatestBlogs";
+import LatestBlogs from "./Containers/LatestBlogs";
 
 const Home = ({ ...props }) => {
     // hooks
@@ -19,10 +19,7 @@ const Home = ({ ...props }) => {
                    initial-scale=1,
                    maximum-scale=1"
                 />
-                <meta
-                    name="description"
-                    content="This is home page"
-                />
+                <meta name="description" content="This is home page" />
                 <meta name="description" content="content" />
                 <meta
                     http-equiv="Content-Type"

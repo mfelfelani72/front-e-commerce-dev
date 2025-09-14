@@ -1,19 +1,35 @@
-// Containers
+import { Link, router } from "@inertiajs/react";
 
-import Header from "./Desktop/Containers/Header";
-import Footer from "./Desktop/Containers/Footer";
+// Layouts
+
+import LayoutMobile from "./Mobile/Layout.jsx"
+import LayoutIpad from "./Ipad/Layout.jsx"
+import LayoutDesktop from "./Desktop/Layout.jsx"
+import LayoutTv from "./Tv/Layout.jsx"
+
+// Hooks
+
+import useDevice from "../../../Utils/Hooks/useDevice.js";
 
 const Layout = ({ children }) => {
+    // hooks
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop,
+        isTv,
+    } = useDevice();
 
     return (
-        <main>
-
-            <Header />
-
-            <article className="mt-[11rem]">{children}</article>
-
-            <Footer />
-        </main>
+        <>
+            {isMobile && <LayoutMobile children={children} />}
+            {isIpad && <LayoutIpad children={children} />}
+            {isDesktop && <LayoutDesktop children={children} />}
+            {isTv && <LayoutTv children={children} />}
+        </>
     );
 };
 

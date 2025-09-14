@@ -1,9 +1,9 @@
 // Ui
 
-import HomeLandingMobile from "./Ui/Mobile/Containers/HomeLanding.jsx";
-import HomeLandingIpad from "./Ui/Ipad/Containers/HomeLanding.jsx";
-import HomeLandingDesktop from "./Ui/Desktop/Containers/HomeLanding.jsx";
-import HomeLandingTv from "./Ui/Tv/Containers/HomeLanding.jsx";
+import HomeLandingMobile from "./Ui/Mobile/HomeLanding.jsx";
+import HomeLandingIpad from "./Ui/Ipad/HomeLanding.jsx";
+import HomeLandingDesktop from "./Ui/Desktop/HomeLanding.jsx";
+import HomeLandingTv from "./Ui/Tv/HomeLanding.jsx";
 
 // Hooks
 
