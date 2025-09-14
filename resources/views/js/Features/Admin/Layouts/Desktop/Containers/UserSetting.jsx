@@ -8,16 +8,16 @@ import {
   SettingIcon,
   ThemeIcon,
   UserIcon,
-} from "../../../../../../Components/Icon.jsx";
-import { InputDarkLight } from "../../../../../../Components/Input.jsx";
+} from "../../../../../Components/Icon.jsx";
+import { InputDarkLight } from "../../../../../Components/Input.jsx";
 
 // Functions
 
-import { cn } from "../../../../../../Utils/Libs/cn.js";
+import { cn } from "../../../../../Utils/Libs/cn.js";
 
 // Zustand
 
-import useAppStore from "../../../../../../Stores/AppStore.js";
+import useAppStore from "../../../../../Stores/AppStore.js";
 
 const UserSetting = () => {
   // hooks

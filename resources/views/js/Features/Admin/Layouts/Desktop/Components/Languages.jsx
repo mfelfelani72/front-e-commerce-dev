@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import i18n from "../../../../../../Utils/Services/i18n/index";
+import i18n from "../../../../../Utils/Services/i18n/index";
 
 // Components
 
-import { InputRadioButton } from "../../../../../../Components/Input";
-import { IranIcon, USIcon } from "../../../../../../Components/Icon";
+import { InputRadioButton } from "../../../../../Components/Input";
+import { IranIcon, USIcon } from "../../../../../Components/Icon";
 
 // Zustand
 
-import useAppStore from "../../../../../../Stores/AppStore";
+import useAppStore from "../../../../../Stores/AppStore";
 
 const Languages = ({ className, ...props }) => {
   // hooks

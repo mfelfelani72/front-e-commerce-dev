@@ -2,21 +2,21 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import DropListBox from "../../../../Components/DropListBox.jsx";
+import DropListBox from "../../../Components/DropListBox.jsx";
 import {
   DashboardIcon,
   HomeIcon,
   ListIcon,
   PostsIcon,
-} from "../../../../../../Components/Icon.jsx";
+} from "../../../../../Components/Icon.jsx";
 
 // Functions
 
-import { cn } from "../../../../../../Utils/Libs/cn.js";
+import { cn } from "../../../../../Utils/Libs/cn.js";
 
 // Zustand
 
-import useAppStore from "../../../../../../Stores/AppStore.js";
+import useAppStore from "../../../../../Stores/AppStore.js";
 
 const Sidebar = () => {
   // hooks

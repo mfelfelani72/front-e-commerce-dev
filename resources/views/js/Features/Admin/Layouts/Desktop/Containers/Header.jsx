@@ -3,23 +3,23 @@ import { useTranslation } from "react-i18next";
 
 // Components
 
-import { InputSearch } from "../../../../../../Components/Input.jsx";
+import { InputSearch } from "../../../../../Components/Input.jsx";
 import {
   BellIcon,
   LanguageIcon,
   UserSettingIcon,
-} from "../../../../../../Components/Icon.jsx";
+} from "../../../../../Components/Icon.jsx";
 import Languages from "../Components/Languages.jsx";
-import GhostBox from "../../../../../../Components/GhostBox/GhostBox.jsx";
+import GhostBox from "../../../../../Components/GhostBox/GhostBox.jsx";
 import UserSetting from "./UserSetting.jsx";
 
 // Functions
 
-import { cn } from "../../../../../../Utils/Libs/cn.js";
+import { cn } from "../../../../../Utils/Libs/cn.js";
 
 // Zustand
 
-import useAppStore from "../../../../../../Stores/AppStore.js";
+import useAppStore from "../../../../../Stores/AppStore.js";
 
 const Header = () => {
   // hooks

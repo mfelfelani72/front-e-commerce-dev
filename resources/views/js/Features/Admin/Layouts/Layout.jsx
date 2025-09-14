@@ -2,10 +2,10 @@ import { Link, router } from "@inertiajs/react";
 
 // Layouts
 
-import ThemeMoblie from "./Ui/Mobile/Layout.jsx"
-import ThemeIpad from "./Ui/Ipad/Layout.jsx"
-import ThemeDesktop from "./Ui/Desktop/Layout.jsx"
-import ThemeTv from "./Ui/Tv/Layout.jsx"
+import LayoutMobile from "./Mobile/Layout.jsx"
+import LayoutIpad from "./Ipad/Layout.jsx"
+import LayoutDesktop from "./Desktop/Layout.jsx"
+import LayoutTv from "./Tv/Layout.jsx"
 
 // Hooks
 
@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            {isMobile && <ThemeMoblie children={children} />}
-            {isIpad && <ThemeIpad children={children} />}
-            {isDesktop && <ThemeDesktop children={children} />}
-            {isTv && <ThemeTv children={children} />}
+            {isMobile && <LayoutMobile children={children} />}
+            {isIpad && <LayoutIpad children={children} />}
+            {isDesktop && <LayoutDesktop children={children} />}
+            {isTv && <LayoutTv children={children} />}
         </>
     );
 };

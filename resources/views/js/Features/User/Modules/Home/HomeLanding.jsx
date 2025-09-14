@@ -1,4 +1,3 @@
-
 import { Head } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 
@@ -22,8 +21,9 @@ const Home = ({ ...props }) => {
                 />
                 <meta
                     name="description"
-                    content="content"
+                    content="This is home page"
                 />
+                <meta name="description" content="content" />
                 <meta
                     http-equiv="Content-Type"
                     content="text/html; charset=utf-8"

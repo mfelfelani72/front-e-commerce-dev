@@ -10,7 +10,7 @@ import LoginTv from "../Layouts/Tv/Login";
 
 // Hooks
 
-import useDevice from '../../../../Utils/Hooks/useDevice';
+import useDevice from '../../../Utils/Hooks/useDevice';
 
 const Login = () => {
   // hooks

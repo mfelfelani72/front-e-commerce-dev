@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../views/js/Utils/Services/i18n/index';
 import AdminTheme from "../views/js/Features/Admin/Layouts/Layout";
-import AuthTheme from "../views/js/Features/Auth/Themes/Theme";
+import AuthTheme from "../views/js/Features/Auth/Layouts/Layout";
 import UserTheme from "../views/js/Features/User/Themes/Theme";
 
 createInertiaApp({
@@ -19,8 +19,8 @@ createInertiaApp({
         }
         // auth
         else if (window.location.pathname.includes('/auth')) {
-            const modules = import.meta.glob("../views/js/Features/Auth/Modules/**/*.{js,jsx}", { eager: true });
-            module = modules[`../views/js/Features/Auth/Modules/${name}.jsx`];
+            const modules = import.meta.glob("../views/js/Features/Auth/**/*.{js,jsx}", { eager: true });
+            module = modules[`../views/js/Features/Auth/${name}.jsx`];
         }
         // user
         else {

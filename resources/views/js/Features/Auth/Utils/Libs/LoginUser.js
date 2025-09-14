@@ -2,8 +2,8 @@ import axios from "axios";
 
 // Functions
 
-import SetErrorOnInput from "../../../../../Utils/Libs/SetErrorOnInput";
-import navigate from "../../../../../Utils/Libs/navigate";
+import SetErrorOnInput from "../../../../Utils/Libs/SetErrorOnInput";
+import navigate from "../../../../Utils/Libs/navigate";
 
 const LoginUser = async (param, setErrors, setSendRequest) => {
     const username = document.getElementById("email").value;

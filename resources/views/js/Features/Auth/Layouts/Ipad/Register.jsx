@@ -9,27 +9,27 @@ import {
     LinkdinIcon,
     Logo,
     TwitterIcon,
-} from "../../../../../Components/Icon.jsx";
+} from "../../../../Components/Icon.jsx";
 import {
     GoogleButton,
     SubmitButton,
     TextButton,
-} from "../../../../../Components/Button.jsx";
+} from "../../../../Components/Button.jsx";
 import {
     InputEmail,
     InputPassword,
     InputRePassword,
-} from "../../../../../Components/Input.jsx";
-import LoaderDotSpinner from "../../../../../Components/LoaderDotSpinner.jsx";
+} from "../../../../Components/Input.jsx";
+import LoaderDotSpinner from "../../../../Components/LoaderDotSpinner.jsx";
 
 // Functions
 
-import navigate from "../../../../../Utils/Libs/navigate.js";
+import navigate from "../../../../Utils/Libs/navigate.js";
 import RegisterUser from "../../Utils/Libs/RegisterUser.js";
 
 // Zustand
 
-import useAppStore from "../../../../../Stores/AppStore.js";
+import useAppStore from "../../../../Stores/AppStore.js";
 
 const Register = () => {
     // hooks

@@ -9,7 +9,7 @@ import RegisterTv from '../Layouts/Tv/Register.jsx';
 
 // Hooks
 
-import useDevice from '../../../../Utils/Hooks/useDevice.js';
+import useDevice from '../../../Utils/Hooks/useDevice.js';
 import { Head } from "@inertiajs/react";
 
 const Register = () => {

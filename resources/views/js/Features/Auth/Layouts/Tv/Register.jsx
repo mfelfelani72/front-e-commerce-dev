@@ -3,23 +3,23 @@ import { useTranslation } from 'react-i18next';
 
 // Components
 
-import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../../Components/Icon.jsx"
-import { GoogleButton, SubmitButton, TextButton } from '../../../../../Components/Button.jsx';
-import { InputEmail, InputPassword, InputRePassword } from '../../../../../Components/Input.jsx';
-import LoaderDotSpinner from '../../../../../Components/LoaderDotSpinner.jsx';
+import { FaceBookIcon, InstagramIcon, LinkdinIcon, Logo, TwitterIcon } from "../../../../Components/Icon.jsx"
+import { GoogleButton, SubmitButton, TextButton } from '../../../../Components/Button.jsx';
+import { InputEmail, InputPassword, InputRePassword } from '../../../../Components/Input.jsx';
+import LoaderDotSpinner from '../../../../Components/LoaderDotSpinner.jsx';
 
 // Functions
 
-import navigate from '../../../../../Utils/Libs/navigate.js';
+import navigate from '../../../../Utils/Libs/navigate.js';
 import RegisterUser from '../../Utils/Libs/RegisterUser.js';
 
 // Images
 
-import image from "../../../../../../../../public/assets/image/register_cover.jpg"
+import image from "../../../../../../../public/assets/image/register_cover.jpg"
 
 // Zustand
 
-import useAppStore from "../../../../../Stores/AppStore.js";
+import useAppStore from "../../../../Stores/AppStore.js";
 
 const Register = () => {
   // hooks

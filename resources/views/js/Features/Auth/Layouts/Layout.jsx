@@ -1,4 +1,4 @@
-const Theme = ({ children }) => {
+const Layout = ({ children }) => {
     return (
         <>
             {children}
@@ -6,4 +6,4 @@ const Theme = ({ children }) => {
     );
 };
 
-export default Theme;
+export default Layout;

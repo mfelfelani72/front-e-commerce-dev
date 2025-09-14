@@ -7,7 +7,7 @@ import { Button } from "../../../../Components/Button";
 
 // Functions
 
-import IsLogin from "../../../Auth/Modules/Utils/Libs/IsLogin"
+import IsLogin from "../../../Auth/Utils/Libs/IsLogin"
 import navigate from "../../../../Utils/Libs/navigate"
 
 // Images

@@ -10,6 +10,8 @@ import {
     HideIcon,
     LockIcon,
     SearchIcon,
+    MoonIcon,
+    SunIcon,
 } from "./Icon";
 
 // Functions
@@ -19,6 +21,7 @@ import { cn } from "../Utils/Libs/cn";
 // Zustand
 
 import useAppStore from "../Stores/AppStore";
+import { useState } from "react";
 
 const handleClear = (id, first_id, secound_id, afterFunction) => {
     const Button1 = document.getElementById(first_id);
@@ -206,12 +209,16 @@ export const InputSearch = ({ className, ...props }) => {
     const { t } = useTranslation();
     return (
         <>
-            <label
-                htmlFor={props?.id}
-                className="text-xs font-medium text-gray-500 px-1 pb-2"
-            >
-                {props?.label}
-            </label>
+            {props?.label && (
+                <>
+                    <label
+                        htmlFor={props?.id}
+                        className="text-xs font-medium text-gray-500 px-1 pb-2"
+                    >
+                        {props?.label}
+                    </label>
+                </>
+            )}
 
             <div className="relative mt-1">
                 <input
@@ -565,4 +572,53 @@ export const InputCheckBoxButton = ({ className, ...props }) => {
         </>
     );
 };
-export const InputDarkLight = ({ className, ...props }) => {};
+export const InputDarkLight = ({ className, ...props }) => {
+    // states
+    const { themeApp, setThemeApp } = useAppStore();
+    const [isDark, setIsDark] = useState(themeApp == "dark" ? true : false);
+
+    // functions
+    const toggleTheme = () => {
+        setIsDark(!isDark);
+
+        if (document.documentElement.classList.value) {
+            localStorage.setItem("theme", "");
+            setThemeApp("light");
+        } else {
+            localStorage.setItem("theme", "dark");
+            setThemeApp("dark");
+        }
+
+        document.documentElement.classList.toggle("dark");
+    };
+
+    return (
+        <div
+            className="inline-flex items-center relative cursor-pointer"
+            onClick={toggleTheme}
+        >
+            <input
+                className="peer hidden"
+                id="toggle"
+                type="checkbox"
+                checked={!isDark}
+                onChange={() => {}}
+            />
+            <div className="relative w-[4rem] h-[2rem] peer-checked:bg-white bg-HoverFocus-dark-100 rounded-full after:absolute after:content-[''] after:w-[1.5rem] after:h-[1.5rem] after:rounded-full after:top-[0.25rem] after:left-[0.25rem] after:bg-[linear-gradient(to_right,_#444350,_#444350)] peer-checked:after:bg-[linear-gradient(to_right,_#f97316,_#facc15)] active:after:w-[1.875rem] peer-checked:after:left-[3.75rem] peer-checked:after:translate-x-[-100%] shadow-sm duration-500 after:duration-500 after:shadow-md"></div>
+
+            <MoonIcon
+                width={"1.25rem"}
+                height={"1.25rem"}
+                color={"white"}
+                className="peer-checked:fill-black opacity-60 peer-checked:opacity-70 fill-white absolute w-4 h-4 left-[0.5rem]"
+            />
+
+            <SunIcon
+                width={"1.25rem"}
+                height={"1.25rem"}
+                color={"white"}
+                className="fill-white peer-checked:opacity-60 absolute w-4 h-4 right-[0.5rem]"
+            />
+        </div>
+    );
+};
