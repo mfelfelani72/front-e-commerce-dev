@@ -2,9 +2,9 @@ import React from "react";
 import {
   ViewIcon,
   TrashIcon,
-} from "../../../../../../Components/Icon.jsx";
+} from "../../../../../../../Components/Icon.jsx";
 
-import Table from "../../../../Components/Table/Table.jsx";
+import Table from "../../../../../Components/Table/Table.jsx";
 
 const PostLists = () => {
   const data = [

@@ -1,50 +1,34 @@
-import React from "react";
-import FormInput from "../../../Components/Form/FormInput.jsx";
-import FormSelect from "../../../Components/Form/FormSelect.jsx";
-import FormImageDrag from "../../../Components/Form/FormImageDrag.jsx";
+// Ui
 
+import CreatePostMobile from "../Ui/Mobile/Containers/CreatePost.jsx"
+import CreatePostIpad from "../Ui/Ipad/Containers/CreatePost.jsx"
+import CreatePostDesktop from "../Ui/Desktop/Containers/CreatePost.jsx"
+import CreatePostTv from "../Ui/Tv/Containers/CreatePost.jsx"
 
-import { useTranslation } from "react-i18next";
+// Hooks
 
+import useDevice from "../../../../../Utils/Hooks/useDevice.js";
 
-import useAppStore from "../../../../../Stores/AppStore.js";
+const PostLists = ({ children }) => {
+    // hooks
+    const {
+        type,
+        orientation,
+        screenWidth,
+        isMobile,
+        isIpad,
+        isDesktop,
+        isTv,
+    } = useDevice();
 
-const CreatePost = () => {
-  // hooks
-  const { t } = useTranslation();
-
-  // states
-  const themeColor = useAppStore((state) => state.themeColor);
-
-  return (
-    <div className="bg-Background-light dark:bg-Background-dark h-auto rounded-2xl text-Text-light dark:text-Text-dark">
-      <div className="p-[1.5rem] border-b border-b-Line-light dark:border-Line-dark">
-        <h5 className="font-bold">{t("post_details")}</h5>
-      </div>
-
-      <div className="p-[1.5rem] flex flex-row justify-between">
-        <div className="w-[25%]">
-          <FormImageDrag title={"thumbnail_image"} required={"required"} />
-        </div>
-        <div className="w-[75%] ltr:pl-[1.5rem] rtl:pr-[1.5rem]">
-          <FormInput title={"name_of_the_post"} type={"text"} placeholder={"name_of_the_post"} required={"required"} />
-          <div className="flex flex-row justify-between [&>div]:w-[50%] gap-x-3.5 py-3.5">
-            <div>
-              <FormSelect title={"category"} label={"select_category"} />
-            </div>
-            <div>
-              <FormSelect title={"yasin"} label={"select_category"} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        {/* <ButtonLink /> */}
-        {/* چرا دکمه کار نمیکنه */}
-      </div>
-    </div>
-  );
+    return (
+        <>
+            {isMobile && <CreatePostMobile children={children} />}
+            {isIpad && <CreatePostIpad children={children} />}
+            {isDesktop && <CreatePostDesktop children={children} />}
+            {isTv && <CreatePostTv children={children} />}
+        </>
+    );
 };
 
-export default CreatePost;
+export default PostLists;

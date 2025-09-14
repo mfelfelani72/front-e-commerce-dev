@@ -1,9 +1,9 @@
 // Ui
 
-import PostsListMobile from "../Ui/Mobile/PostsList.jsx"
-import PostsListIpad from "../Ui/Ipad/PostsList.jsx"
-import PostsListDesktop from "../Ui/Desktop/PostsList.jsx"
-import PostsListTv from "../Ui/Tv/PostsList.jsx"
+import PostsListMobile from "../Ui/Mobile/Containers/PostsList.jsx"
+import PostsListIpad from "../Ui/Ipad/Containers/PostsList.jsx"
+import PostsListDesktop from "../Ui/Desktop/Containers/PostsList.jsx"
+import PostsListTv from "../Ui/Tv/Containers/PostsList.jsx"
 
 // Hooks
 
