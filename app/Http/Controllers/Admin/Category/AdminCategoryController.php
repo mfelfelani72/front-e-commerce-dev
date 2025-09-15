@@ -28,8 +28,8 @@ class AdminCategoryController extends Controller
     {
         $parameters = $request->all();
        
-        // $response = connectToServer("post", config('apiRoutes.user_login'), $parameters, "", "loginUser");
+        $response = connectToServer("post", config('apiRoutes.create_category'), $parameters, "", "createCategory");
 
-        return response()->json($parameters);
+        return response()->json($response);
     }
 }
