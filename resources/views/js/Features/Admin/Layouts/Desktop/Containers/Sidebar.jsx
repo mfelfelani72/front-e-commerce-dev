@@ -46,14 +46,36 @@ const Sidebar = () => {
             title={"home"}
           />
           <DropListBox
-            id={"posts"}
+            id={"post"}
             icon={<PostsIcon className={`text-${themeColor} dark:text-${themeColor}`}/>}
-            title={"posts"}
+            title={"post"}
             items={[
               {
                 name: "posts_list",
                 icon: <ListIcon className={`w-5 h-5 text-${themeColor} dark:text-${themeColor}`} />,
-                link: "/admin/posts/list-post",
+                link: "/admin/posts/posts-list",
+              },
+              {
+                name: "create_post",
+                icon: <ListIcon className={`w-5 h-5 text-${themeColor} dark:text-${themeColor}`} />,
+                link: "/admin/posts/create-post",
+              },
+            ]}
+          />
+          <DropListBox
+            id={"category"}
+            icon={<PostsIcon className={`text-${themeColor} dark:text-${themeColor}`}/>}
+            title={"category"}
+            items={[
+              {
+                name: "categories_list",
+                icon: <ListIcon className={`w-5 h-5 text-${themeColor} dark:text-${themeColor}`} />,
+                link: "/admin/category/categories-list",
+              },
+              {
+                name: "create_category",
+                icon: <ListIcon className={`w-5 h-5 text-${themeColor} dark:text-${themeColor}`} />,
+                link: "/admin/category/create-category",
               },
             ]}
           />

@@ -9,7 +9,7 @@ use Inertia\Inertia;
 
 class AdminPostController extends Controller
 {
-    public function listPost()
+    public function listPosts()
     {
         return Inertia::render('Posts/Containers/PostsList', [
             'post' => 1,
