@@ -22,6 +22,8 @@ Route::controller(AdminCategoryController::class)->group(function () {
    
     Route::get('/admin/category/categories-list', 'CategoriesList');
     Route::get('/admin/category/create-category', 'CreateCategory');
+     Route::post('/admin/category/createCategoryData', 'createCategoryData')->name('createCategoryData');
+    
 });
 
 // user
