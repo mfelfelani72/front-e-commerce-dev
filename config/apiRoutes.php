@@ -10,4 +10,5 @@ return [
 
     // admin category
     'create_category'=>"/admin/category/store",
+    'categories'=>"/admin/category/categories",
 ];

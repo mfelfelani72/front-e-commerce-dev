@@ -24,10 +24,19 @@ class AdminCategoryController extends Controller
         ]);
     }
 
+    public function categoriesData(Request $request)
+    {
+        $parameters = $request->all();
+        
+        $response = connectToServer("post", config('apiRoutes.categories'), $parameters, "", "categories");
+
+        return response()->json($response);
+    }
+
     public function createCategoryData(Request $request)
     {
         $parameters = $request->all();
-       
+
         $response = connectToServer("post", config('apiRoutes.create_category'), $parameters, "", "createCategory");
 
         return response()->json($response);

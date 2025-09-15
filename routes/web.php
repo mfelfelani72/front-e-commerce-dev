@@ -12,17 +12,17 @@ Route::resource('/admin', HomeController::class);
 
 // post
 Route::controller(AdminPostController::class)->group(function () {
-   
     Route::get('/admin/posts/posts-list', 'listPosts');
     Route::get('/admin/posts/create-post', 'CreatePost');
 });
 
 // category
 Route::controller(AdminCategoryController::class)->group(function () {
-   
+
     Route::get('/admin/category/categories-list', 'CategoriesList');
     Route::get('/admin/category/create-category', 'CreateCategory');
-     Route::post('/admin/category/createCategoryData', 'createCategoryData')->name('createCategoryData');
+    Route::post('/admin/category/createCategoryData', 'createCategoryData')->name('createCategoryData');
+    Route::post('/admin/category/categoriesData', 'categoriesData')->name('categoriesData');
     
 });
 
@@ -35,7 +35,7 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 Route::controller(PostController::class)->group(function () {
-   
+
     Route::get('/posts/view-post', 'viewPost');
 });
 
