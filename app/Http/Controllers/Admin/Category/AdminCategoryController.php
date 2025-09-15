@@ -27,10 +27,7 @@ class AdminCategoryController extends Controller
     public function createCategoryData(Request $request)
     {
         $parameters = $request->all();
-        // dd("dsfdsfsd");
-
-        // dd($parameters);
-
+       
         // $response = connectToServer("post", config('apiRoutes.user_login'), $parameters, "", "loginUser");
 
         return response()->json($parameters);
